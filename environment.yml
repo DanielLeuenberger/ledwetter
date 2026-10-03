@@ -1,0 +1,15 @@
+# Development environment for ledwetter.
+#   conda env create -f environment.yml
+#   conda activate ledwetter
+#   pip install -e . --no-deps --no-build-isolation
+name: ledwetter
+channels:
+  - conda-forge
+dependencies:
+  - python>=3.10
+  - pandas>=2.0
+  - requests>=2.28
+  - pyyaml>=6.0
+  - pytest>=7.4
+  - pip
+  - setuptools>=68

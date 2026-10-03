@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Zürcher Messdaten</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600&display=swap">
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>
+  :root {
+    --fog: #EEF1EF; --panel: #F7F9F8; --ink: #17313B; --muted: #5E7279;
+    --line: #CAD4D3; --accent: #0F6B7A; --accent-ink: #FFFFFF; --error: #A33A2B;
+    --ui: "Barlow", "Helvetica Neue", Arial, sans-serif;
+    --display: "Barlow Semi Condensed", "Arial Narrow", "Helvetica Neue", sans-serif;
+    color-scheme: light dark;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --fog: #13232A; --panel: #182C34; --ink: #E3ECEC; --muted: #9DB1B6;
+            --line: #2E454D; --accent: #5FB3C1; --accent-ink: #0D1E24; --error: #E08A7A; }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; height: 100%; }
+  body { background: var(--fog); color: var(--ink); font: 15px/1.45 var(--ui);
+         padding: env(safe-area-inset-top, 0) env(safe-area-inset-right, 0) env(safe-area-inset-bottom, 0) env(safe-area-inset-left, 0); }
+  header { padding: 20px 24px 12px; border-bottom: 1px solid var(--line); }
+  h1 { font: 600 28px/1.1 var(--display); margin: 0 0 6px; letter-spacing: -0.01em; }
+  #summary { margin: 0; color: var(--muted); max-width: 72ch; }
+  .app { display: grid; grid-template-columns: 330px 1fr; min-height: calc(100% - 90px); }
+  aside { border-right: 1px solid var(--line); background: var(--panel); padding: 16px 20px 32px; overflow-y: auto; }
+  main { padding: 16px 20px 24px; min-width: 0; }
+  fieldset { border: 0; margin: 0 0 22px; padding: 0; }
+  legend, .label { font: 600 17px/1.2 var(--display); margin-bottom: 8px; padding: 0; }
+  .hint { color: var(--muted); font-size: 13px; margin: 4px 0 0; }
+  .group-name { font-size: 13px; color: var(--muted); margin: 12px 0 4px; }
+  .station { display: grid; grid-template-columns: 6px 18px 1fr; gap: 8px; align-items: center;
+             padding: 5px 6px 5px 0; border-radius: 4px; cursor: pointer; }
+  .station:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+  .swatch { width: 6px; height: 22px; border-radius: 2px; }
+  .station input { margin: 0; }
+  .station small { color: var(--muted); display: block; font-size: 12px; }
+  .checks label { display: flex; gap: 8px; align-items: center; padding: 3px 0; }
+  .segmented { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
+  .segmented input { position: absolute; opacity: 0; pointer-events: none; }
+  .segmented label { text-align: center; padding: 7px 4px; cursor: pointer; border-right: 1px solid var(--line); font-size: 14px; }
+  .segmented label:last-of-type { border-right: 0; }
+  .segmented input:checked + label { background: var(--accent); color: var(--accent-ink); }
+  .segmented input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: -3px; }
+  .range { display: grid; grid-template-columns: 1fr; gap: 6px; }
+  .range label { font-size: 13px; color: var(--muted); }
+  input[type=datetime-local], input[type=number] { width: 100%; font: inherit; color: var(--ink); background: var(--fog);
+         border: 1px solid var(--line); border-radius: 4px; padding: 6px 8px; }
+  .presets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  button { font: inherit; cursor: pointer; border-radius: 4px; }
+  .presets button { background: transparent; color: var(--ink); border: 1px solid var(--line); padding: 4px 10px; font-size: 13px; }
+  .presets button:hover { border-color: var(--accent); }
+  #draw { width: 100%; background: var(--accent); color: var(--accent-ink); border: 0; padding: 10px; font-weight: 600; }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .row { display: flex; gap: 10px; align-items: center; }
+  #status { color: var(--muted); min-height: 1.4em; margin: 0 0 8px; }
+  #status.error { color: var(--error); }
+  #plot { width: 100%; }
+  .empty { border: 1px dashed var(--line); border-radius: 6px; padding: 40px 24px; color: var(--muted); max-width: 60ch; }
+  .empty code { color: var(--ink); }
+  @media (max-width: 860px) {
+    .app { grid-template-columns: 1fr; }
+    aside { border-right: 0; border-bottom: 1px solid var(--line); max-height: none; }
+    header { padding: 16px; } main { padding: 12px; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Zürcher Messdaten</h1>
+  <p id="summary">Lade Stationen …</p>
+</header>
+<div class="app">
+  <aside>
+    <form id="controls" onsubmit="return false">
+      <fieldset>
+        <legend>Stationen</legend>
+        <div id="stations"></div>
+        <p class="hint">Die Farbe gilt in allen Diagrammen.</p>
+      </fieldset>
+      <fieldset>
+        <legend>Messgrössen</legend>
+        <div id="params" class="checks"></div>
+      </fieldset>
+      <fieldset>
+        <legend>Zeitraum</legend>
+        <div class="range">
+          <label for="from">Von</label><input type="datetime-local" id="from" step="600">
+          <label for="to">Bis</label><input type="datetime-local" id="to" step="600">
+        </div>
+        <div class="presets" id="presets">
+          <button type="button" data-h="24">24 h</button>
+          <button type="button" data-h="168">7 Tage</button>
+          <button type="button" data-h="720">30 Tage</button>
+          <button type="button" data-h="8760">1 Jahr</button>
+          <button type="button" data-h="all">Alles</button>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <div class="segmented" style="flex:1" role="radiogroup" aria-label="Zeitzone">
+            <input type="radio" name="tz" id="tz-local" value="local" checked><label for="tz-local">Lokalzeit</label>
+            <input type="radio" name="tz" id="tz-utc" value="utc"><label for="tz-utc">UTC</label>
+          </div>
+        </div>
+      </fieldset>
+      <fieldset>
+        <legend>Werte</legend>
+        <div class="segmented" role="radiogroup" aria-label="Zeitliche Aggregierung">
+          <input type="radio" name="agg" id="agg-raw" value="raw" checked><label for="agg-raw">Rohdaten</label>
+          <input type="radio" name="agg" id="agg-hour" value="hour"><label for="agg-hour">Stunden</label>
+          <input type="radio" name="agg" id="agg-day" value="day"><label for="agg-day">Tage</label>
+        </div>
+        <div id="agg-options" hidden>
+          <div class="checks" style="margin-top:10px">
+            <label><input type="checkbox" id="band" checked> Min–Max-Spanne zeigen</label>
+          </div>
+          <label class="hint" for="coverage">Mindestabdeckung pro Stunde/Tag in %</label>
+          <input type="number" id="coverage" min="0" max="100" step="5" value="75">
+          <p class="hint">Stunden und Tage in UTC, beschriftet mit ihrem Beginn. Lücken unter der Mindestabdeckung bleiben leer.</p>
+        </div>
+      </fieldset>
+      <button type="button" id="draw">Diagramm zeichnen</button>
+    </form>
+  </aside>
+  <main>
+    <p id="status" role="status" aria-live="polite"></p>
+    <div id="plot"></div>
+  </main>
+</div>
+<script>
+const PARAMS = { air_temperature: "Lufttemperatur", water_temperature: "Wassertemperatur", wind_speed: "Windgeschwindigkeit" };
+const SOURCES = { meteoschweiz: "MeteoSchweiz", wapo: "Wasserschutzpolizei", bafu: "BAFU Hydrologie", ugz: "Stadt Zürich UGZ", metar: "METAR" };
+const COLORS = ["#1F6F8B", "#5C8A3A", "#B5861B", "#7A4E8C", "#2F5D50", "#A8452F", "#4B6FB5", "#8C6D46", "#2A8C82", "#9C3D6A", "#5E6B2E", "#3D4F7A"];
+const AGG_LABEL = { raw: "Rohdaten", hour: "Stundenwerte", day: "Tageswerte" };
+const $ = (id) => document.getElementById(id);
+const state = { series: [], stations: new Map() };
+
+const tz = () => document.querySelector("input[name=tz]:checked").value;
+const agg = () => document.querySelector("input[name=agg]:checked").value;
+const fmt = (zone) => new Intl.DateTimeFormat("sv-SE", { timeZone: zone, year: "numeric", month: "2-digit",
+  day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hourCycle: "h23" });
+const toLabel = (sec) => fmt(tz() === "utc" ? "UTC" : undefined).format(new Date(sec * 1000));
+const toInput = (sec) => toLabel(sec).slice(0, 16).replace(" ", "T");
+const fromInput = (val) => Date.parse(tz() === "utc" ? val + "Z" : val) / 1000;
+
+function setStatus(text, isError = false) { $("status").textContent = text; $("status").className = isError ? "error" : ""; }
+
+async function getJSON(url) {
+  const res = await fetch(url);
+  const body = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(body.error || `Anfrage fehlgeschlagen (${res.status})`);
+  return body;
+}
+
+async function init() {
+  try { state.series = (await getJSON("/api/series")).series; }
+  catch (e) { $("summary").textContent = "Server nicht erreichbar."; setStatus(e.message, true); return; }
+  if (!state.series.length) {
+    $("summary").textContent = "Die Datenbank ist leer.";
+    $("plot").innerHTML = '<div class="empty">Noch keine Messwerte vorhanden. Führe <code>python -m ledwetter update</code> aus und lade die Seite neu.</div>';
+    return;
+  }
+  state.series.forEach((s) => {
+    const key = `${s.source}|${s.station_id}`;
+    if (!state.stations.has(key)) state.stations.set(key, { key, name: s.station_name, source: s.source, series: [] });
+    state.stations.get(key).series.push(s);
+  });
+  [...state.stations.values()].forEach((st, i) => (st.color = COLORS[i % COLORS.length]));
+  renderStations(); renderParams(); setPreset(168);
+  updateSummary();
+  $("plot").innerHTML = '<div class="empty">Wähle Stationen, Messgrössen und Zeitraum, dann «Diagramm zeichnen».</div>';
+}
+
+function renderStations() {
+  const bySource = {};
+  state.stations.forEach((st) => (bySource[st.source] ||= []).push(st));
+  $("stations").innerHTML = Object.entries(bySource).map(([src, list]) =>
+    `<div class="group-name">${SOURCES[src] || src}</div>` + list.map((st) => {
+      const params = [...new Set(st.series.map((s) => PARAMS[s.parameter] || s.parameter))].join(", ");
+      return `<label class="station"><span class="swatch" style="background:${st.color}"></span>
+        <input type="checkbox" name="station" value="${st.key}"><span>${st.name}<small>${params}</small></span></label>`;
+    }).join("")).join("");
+}
+
+function renderParams() {
+  const found = new Set(state.series.map((s) => s.parameter));
+  const present = [...Object.keys(PARAMS).filter((p) => found.has(p)), ...[...found].filter((p) => !(p in PARAMS))];
+  $("params").innerHTML = present.map((p) =>
+    `<label><input type="checkbox" name="param" value="${p}" ${p === "air_temperature" ? "checked" : ""}> ${PARAMS[p] || p}</label>`).join("");
+}
+
+const selected = (name) => [...document.querySelectorAll(`input[name=${name}]:checked`)].map((i) => i.value);
+
+function selectedSeries() {
+  const params = selected("param");
+  return selected("station").flatMap((k) => state.stations.get(k).series.filter((s) => params.includes(s.parameter)));
+}
+
+function setPreset(h) {
+  let end = Math.max(...state.series.map((s) => s.last || 0));
+  let start;
+  if (h === "all") {
+    const pool = selectedSeries().length ? selectedSeries() : state.series;
+    start = Math.min(...pool.map((s) => s.first)); end = Math.max(...pool.map((s) => s.last));
+  } else start = end - h * 3600;
+  $("from").value = toInput(start); $("to").value = toInput(end);
+  updateSummary();
+}
+
+function updateSummary() {
+  const st = selected("station").length, ps = selected("param").map((p) => PARAMS[p]);
+  const range = $("from").value && $("to").value ? `${$("from").value.replace("T", " ")} bis ${$("to").value.replace("T", " ")}` : "";
+  if (!st || !ps.length) { $("summary").textContent = `${state.stations.size} Stationen verfügbar. Wähle Stationen und Messgrössen.`; return; }
+  const list = ps.length > 1 ? ps.slice(0, -1).join(", ") + " und " + ps.at(-1) : ps[0];
+  $("summary").textContent = `${list} an ${st} ${st === 1 ? "Station" : "Stationen"}, ${range} (${tz() === "utc" ? "UTC" : "Lokalzeit"}), ${AGG_LABEL[agg()]}.`;
+}
+
+function seriesLabel(s, siblings) {
+  const st = state.stations.get(`${s.source}|${s.station_id}`);
+  if (siblings > 1) return `${st.name} (${s.time_ref === "instant" ? "Momentanwert" : `${s.interval_min}-min-Mittel`})`;
+  return st.name;
+}
+
+async function draw() {
+  const series = selectedSeries();
+  if (!series.length) { setStatus("Wähle mindestens eine Station und eine Messgrösse, die dort gemessen wird.", true); return; }
+  const start = fromInput($("from").value), end = fromInput($("to").value);
+  if (!(start < end)) { setStatus("Der Beginn muss vor dem Ende liegen.", true); return; }
+  const a = agg(), cov = Math.min(100, Math.max(0, Number($("coverage").value) || 0)) / 100;
+  setStatus("Lade Messwerte …");
+  let data;
+  try {
+    data = await getJSON(`/api/data?series=${series.map((s) => s.id).join(",")}&start=${start}&end=${end}&agg=${a}&min_coverage=${cov}`);
+  } catch (e) { setStatus(e.message, true); return; }
+
+  const params = selected("param").filter((p) => series.some((s) => s.parameter === p));
+  const byId = Object.fromEntries(data.series.map((d) => [d.id, d]));
+  const css = getComputedStyle(document.documentElement);
+  const ink = css.getPropertyValue("--ink").trim(), line = css.getPropertyValue("--line").trim();
+  const traces = [], gap = 0.07, h = (1 - gap * (params.length - 1)) / params.length;
+  const layout = { height: 300 * params.length + 90, margin: { l: 56, r: 16, t: 28, b: 48 }, hovermode: "x unified",
+    paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", font: { family: "Barlow, sans-serif", color: ink, size: 13 },
+    showlegend: false, annotations: [] };
+  let points = 0;
+  params.forEach((p, i) => {
+    const ax = i === 0 ? "" : String(i + 1);
+    const top = 1 - i * (h + gap);
+    const unit = series.find((s) => s.parameter === p).unit;
+    layout[`yaxis${ax}`] = { domain: [top - h, top], title: { text: unit }, gridcolor: line, zerolinecolor: line, anchor: `x${ax}` };
+    layout[`xaxis${ax}`] = { anchor: `y${ax}`, matches: i ? "x" : undefined, showticklabels: i === params.length - 1,
+                             gridcolor: line, type: "date" };
+    layout.annotations.push({ text: PARAMS[p], xref: "paper", yref: "paper", x: 0, y: top + 0.005, xanchor: "left",
+                              yanchor: "bottom", showarrow: false, font: { size: 15, family: "Barlow Semi Condensed, sans-serif" } });
+    const own = series.filter((s) => s.parameter === p);
+    own.forEach((s) => {
+      const d = byId[s.id]; if (!d || !d.t.length) return;
+      const st = state.stations.get(`${s.source}|${s.station_id}`);
+      const x = d.t.map(toLabel), name = seriesLabel(s, own.filter((o) => o.station_id === s.station_id && o.source === s.source).length);
+      points += d.t.length;
+      if (a !== "raw" && $("band").checked) {
+        traces.push({ x, y: d.max, xaxis: `x${ax}`, yaxis: `y${ax}`, mode: "lines", line: { width: 0 }, hoverinfo: "skip", connectgaps: false });
+        traces.push({ x, y: d.min, xaxis: `x${ax}`, yaxis: `y${ax}`, mode: "lines", line: { width: 0 }, fill: "tonexty",
+                      fillcolor: st.color + "2E", hoverinfo: "skip", connectgaps: false });
+      }
+      const custom = a === "raw" ? null : d.t.map((_, k) => [d.min[k], d.max[k], d.n[k]]);
+      traces.push({ x, y: d.mean, xaxis: `x${ax}`, yaxis: `y${ax}`, name, mode: d.t.length > 400 ? "lines" : "lines+markers",
+        line: { color: st.color, width: 1.6 }, marker: { size: 4, color: st.color }, connectgaps: false, customdata: custom,
+        hovertemplate: a === "raw" ? `${name}: %{y:.1f} ${unit}<extra></extra>`
+          : `${name}: %{y:.1f} ${unit} (%{customdata[0]:.1f} bis %{customdata[1]:.1f}, n=%{customdata[2]})<extra></extra>` });
+    });
+  });
+  if (!points) { Plotly.purge("plot"); $("plot").innerHTML = '<div class="empty">Im gewählten Zeitraum gibt es für diese Auswahl keine Messwerte. Prüfe den Zeitraum oder die Mindestabdeckung.</div>'; setStatus(""); return; }
+  $("plot").innerHTML = "";
+  await Plotly.newPlot("plot", traces, layout, { responsive: true, displaylogo: false, displayModeBar: !window.matchMedia("(max-width: 860px)").matches });
+  setStatus(`${points.toLocaleString("de-CH")} Punkte aus ${data.series.filter((d) => d.t.length).length} Reihen.`);
+  updateSummary();
+  if (window.matchMedia("(max-width: 860px)").matches) $("status").scrollIntoView({ block: "start" });
+}
+
+$("draw").addEventListener("click", draw);
+$("presets").addEventListener("click", (e) => { const h = e.target.dataset.h; if (h) setPreset(h === "all" ? "all" : Number(h)); });
+$("controls").addEventListener("change", (e) => {
+  if (e.target.name === "agg") $("agg-options").hidden = agg() === "raw";
+  if (e.target.name === "tz") { /* re-display the inputs in the newly selected time zone */
+    const other = tz() === "utc" ? "local" : "utc";
+    ["from", "to"].forEach((id) => { const v = $(id).value; if (!v) return;
+      const sec = Date.parse(other === "utc" ? v + "Z" : v) / 1000; $(id).value = toInput(sec); });
+  }
+  updateSummary();
+});
+init();
+</script>
+</body>
+</html>

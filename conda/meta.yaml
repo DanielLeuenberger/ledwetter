@@ -1,0 +1,46 @@
+# conda-build recipe for ledwetter (pure Python, noarch).
+#   conda build conda/ -c conda-forge
+#   conda install -c local ledwetter
+{% set pyproject = load_file_data("pyproject.toml") %}
+{% set version = pyproject["project"]["version"] %}
+
+package:
+  name: ledwetter
+  version: {{ version }}
+
+source:
+  path: ..
+
+build:
+  number: 0
+  noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -vv
+  entry_points:
+    - ledwetter = ledwetter.__main__:main
+
+requirements:
+  host:
+    - python >=3.10
+    - pip
+    - setuptools >=68
+  run:
+    - python >=3.10
+    - pandas >=2.0
+    - requests >=2.28
+    - pyyaml >=6.0
+
+test:
+  imports:
+    - ledwetter
+    - ledwetter.sources
+  requires:
+    - pytest >=7.4
+  source_files:
+    - tests
+  commands:
+    - ledwetter --help
+    - pytest -q tests
+
+about:
+  summary: Collect, store and visualise measurements from public weather stations around Zurich
+  license: LicenseRef-Proprietary

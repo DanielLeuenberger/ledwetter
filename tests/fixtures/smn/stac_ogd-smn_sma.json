@@ -1,0 +1,19 @@
+{
+ "assets": {
+  "ogd-smn_sma_t_historical_2020-2029.csv": {
+   "href": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-smn/sma/ogd-smn_sma_t_historical_2020-2029.csv"
+  },
+  "ogd-smn_sma_t_recent.csv": {
+   "href": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-smn/sma/ogd-smn_sma_t_recent.csv"
+  },
+  "ogd-smn_sma_t_now.csv": {
+   "href": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-smn/sma/ogd-smn_sma_t_now.csv"
+  },
+  "ogd-smn_sma_h_now.csv": {
+   "href": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-smn/sma/ogd-smn_sma_h_now.csv"
+  },
+  "ogd-smn_sma_d_recent.csv": {
+   "href": "https://data.geo.admin.ch/ch.meteoschweiz.ogd-smn/sma/ogd-smn_sma_d_recent.csv"
+  }
+ }
+}

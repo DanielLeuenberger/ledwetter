@@ -1,0 +1,45 @@
+# ledwetter – station configuration
+# All timestamps are measurement times reported by the sources (UTC). Records without one are discarded.
+
+settings:
+  user_agent: "ledwetter/0.1 (private use)"
+  timeout_seconds: 120
+  request_delay_seconds: 0.2      # pause between requests; spares the servers during backfills
+  db_file: "data/ledwetter.db"
+
+# MeteoSwiss SwissMetNet (open government data). 10-minute means, timestamp = interval end.
+meteoschweiz:
+  stations:
+    - {code: SMA, name: "Zürich / Fluntern"}
+    - {code: KLO, name: "Zürich / Kloten"}
+    - {code: REH, name: "Zürich / Affoltern"}
+    - {code: LAE, name: "Lägern"}
+    - {code: UEB, name: "Uetliberg (Turm)", collection: ogd-smn-tower}
+  # history_start: "2015-01-01"   # limit the backfill (default: oldest 10-minute file)
+
+# Zurich water police: history from the open-data CSV (since 2007), recent days from the Tecdottir API.
+wapo:
+  stations:
+    - {id: tiefenbrunnen, name: "Tiefenbrunnen (WaPo)"}
+    - {id: mythenquai, name: "Mythenquai (WaPo)"}
+
+# FOEN (BAFU) hydrology (data.bafu.admin.ch, GraphQL). Water temperature, 10-minute means.
+bafu:
+  stations:
+    - {station_id: "2099", name: "Limmat, Zürich (2099)"}
+    - {station_id: "2243", name: "Limmat, Unterhard (2243)"}
+    - {station_id: "2176", name: "Sihl, Zürich (2176)"}
+  # include_live: true            # additionally store instantaneous values of the last 12 h
+
+# City of Zurich UGZ, hourly means since 1992.
+ugz:
+  stations:
+    - {standort: "Zch_Stampfenbachstrasse", name: "Stampfenbachstrasse (UGZ)"}
+    - {standort: "Zch_Schimmelstrasse", name: "Schimmelstrasse (UGZ)"}
+    - {standort: "Zch_Rosengartenstrasse", name: "Rosengartenstrasse (UGZ)"}
+    - {standort: "Zch_Heubeeribüel", name: "Heubeeribüel (UGZ)"}
+
+# METAR (aviationweather.gov). Only a few days of archive; run updates regularly.
+metar:
+  stations:
+    - {icao: LSZH, name: "Zürich Flughafen (METAR)"}

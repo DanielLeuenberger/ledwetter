@@ -1,0 +1,16 @@
+meteoschweiz:
+  stations:
+    - {code: SMA, name: "Zürich / Fluntern"}
+    - {code: UEB, name: "Uetliberg (Turm)", collection: ogd-smn-tower}
+wapo:
+  stations:
+    - {id: mythenquai, name: "Mythenquai (WaPo)"}
+bafu:
+  stations:
+    - {station_id: "2099", name: "Limmat, Zürich (2099)"}
+ugz:
+  stations:
+    - {standort: "Zch_Stampfenbachstrasse", name: "Stampfenbachstrasse (UGZ)"}
+metar:
+  stations:
+    - {icao: LSZH, name: "Zürich Flughafen (METAR)"}
