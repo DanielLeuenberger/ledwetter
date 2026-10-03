@@ -1,9 +1,11 @@
 """City of Zurich, Environmental and Health Protection (UGZ): hourly means from yearly files (long format).
 
 Columns: Datum, Standort, Parameter, Intervall, Einheit, Wert, Status.
-Stations: Zch_Stampfenbachstrasse, Zch_Schimmelstrasse, Zch_Rosengartenstrasse.
-Parameters: T, Hr, p, RainDur, StrGlo, WD, WVv, WVs (all are extracted).
-Whether 'Datum' marks the start or the end of the hour is not verified -> time_ref = unknown.
+Stations: Zch_Stampfenbachstrasse, Zch_Schimmelstrasse, Zch_Rosengartenstrasse (T, Hr, p, RainDur, WD, WVs,
+WVv; StrGlo at Stampfenbachstrasse only) and Zch_Heubeeribüel (T, Hr, p). All parameters are extracted.
+'Datum' marks the START of the hour: compared with the 10-minute global radiation of MeteoSwiss at
+Zürich / Fluntern (about 1.5 km away), hourly StrGlo matches with an RMS difference of 9 W/m² when 'Datum'
+is taken as the start of the hour and 75 W/m² when taken as its end (diagnostic run, 3 October 2026).
 """
 from __future__ import annotations
 
@@ -27,7 +29,7 @@ class UgzMeteo(Source):
     regions = ("ZH",)
     defaults = {"url_template": ("https://data.stadt-zuerich.ch/dataset/ugz_meteodaten_stundenmittelwerte/"
                                  "download/ugz_ogd_meteo_h1_{year}.csv"),
-                "time_ref": "unknown", "history_start": "1992-01-01"}
+                "time_ref": "interval_start", "history_start": "1992-01-01"}
     CATALOG = {
         "T": ("Lufttemperatur", "°C", "Temperatur", "mean", "air_temperature"),
         "Hr": ("Relative Luftfeuchtigkeit", "%Hr", "Feuchte", "mean", "relative_humidity"),

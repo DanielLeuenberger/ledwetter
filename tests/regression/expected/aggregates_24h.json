@@ -952,16 +952,10 @@
  },
  "metar/LSZH/visib/instant": {
   "day": {
-   "agg": "mean",
+   "agg": "min",
    "expected": null,
-   "max": [
-    6.0,
-    6.0
-   ],
-   "min": [
-    6.0,
-    6.0
-   ],
+   "max": null,
+   "min": null,
    "n": [
     36,
     12
@@ -971,65 +965,15 @@
     1790985600
    ],
    "value": [
-    6.0,
-    6.0
+    10.0,
+    10.0
    ]
   },
   "hour": {
-   "agg": "mean",
+   "agg": "min",
    "expected": null,
-   "max": [
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0
-   ],
-   "min": [
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0
-   ],
+   "max": null,
+   "min": null,
    "n": [
     2,
     2,
@@ -1083,30 +1027,30 @@
     1791003600
    ],
    "value": [
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0,
-    6.0
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0,
+    10.0
    ]
   },
   "raw_count": 48
@@ -3421,7 +3365,7 @@
   },
   "raw_count": 109
  },
- "ugz/Zch_Stampfenbachstrasse/Hr/unknown": {
+ "ugz/Zch_Stampfenbachstrasse/Hr/interval_start": {
   "day": {
    "agg": "mean",
    "expected": 24,
@@ -3577,7 +3521,7 @@
   },
   "raw_count": 24
  },
- "ugz/Zch_Stampfenbachstrasse/RainDur/unknown": {
+ "ugz/Zch_Stampfenbachstrasse/RainDur/interval_start": {
   "day": {
    "agg": "sum",
    "expected": 24,
@@ -3679,7 +3623,7 @@
   },
   "raw_count": 24
  },
- "ugz/Zch_Stampfenbachstrasse/StrGlo/unknown": {
+ "ugz/Zch_Stampfenbachstrasse/StrGlo/interval_start": {
   "day": {
    "agg": "mean",
    "expected": 24,
@@ -3835,7 +3779,7 @@
   },
   "raw_count": 24
  },
- "ugz/Zch_Stampfenbachstrasse/T/unknown": {
+ "ugz/Zch_Stampfenbachstrasse/T/interval_start": {
   "day": {
    "agg": "mean",
    "expected": 24,
@@ -3991,7 +3935,7 @@
   },
   "raw_count": 24
  },
- "ugz/Zch_Stampfenbachstrasse/WD/unknown": {
+ "ugz/Zch_Stampfenbachstrasse/WD/interval_start": {
   "day": {
    "agg": "dir",
    "expected": 24,
@@ -4093,7 +4037,7 @@
   },
   "raw_count": 24
  },
- "ugz/Zch_Stampfenbachstrasse/WVs/unknown": {
+ "ugz/Zch_Stampfenbachstrasse/WVs/interval_start": {
   "day": {
    "agg": "mean",
    "expected": 24,
@@ -4249,7 +4193,7 @@
   },
   "raw_count": 24
  },
- "ugz/Zch_Stampfenbachstrasse/WVv/unknown": {
+ "ugz/Zch_Stampfenbachstrasse/WVv/interval_start": {
   "day": {
    "agg": "mean",
    "expected": 24,
@@ -4405,7 +4349,7 @@
   },
   "raw_count": 24
  },
- "ugz/Zch_Stampfenbachstrasse/p/unknown": {
+ "ugz/Zch_Stampfenbachstrasse/p/interval_start": {
   "day": {
    "agg": "mean",
    "expected": 24,

@@ -575,54 +575,54 @@ time_utc,time_ref,interval_min,source,station_id,station_name,parameter,value,un
 2026-10-03T04:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),temp,6.0,°C,air_temperature,Lufttemperatur
 2026-10-03T05:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),temp,7.0,°C,air_temperature,Lufttemperatur
 2026-10-03T05:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),temp,7.0,°C,air_temperature,Lufttemperatur
-2026-10-02T06:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T06:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T07:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T07:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T08:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T08:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T09:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T09:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T10:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T10:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T11:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T11:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T12:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T12:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T13:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T13:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T14:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T14:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T15:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T15:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T16:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T16:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T17:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T17:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T18:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T18:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T19:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T19:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T20:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T20:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T21:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T21:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T22:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T22:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T23:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-02T23:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T00:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T00:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T01:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T01:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T02:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T02:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T03:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T03:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T04:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T04:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T05:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
-2026-10-03T05:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,6.0,SM,visibility,Sichtweite
+2026-10-02T06:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T06:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T07:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T07:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T08:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T08:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T09:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T09:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T10:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T10:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T11:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T11:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T12:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T12:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T13:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T13:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T14:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T14:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T15:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T15:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T16:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T16:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T17:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T17:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T18:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T18:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T19:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T19:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T20:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T20:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T21:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T21:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T22:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T22:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T23:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-02T23:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T00:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T00:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T01:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T01:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T02:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T02:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T03:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T03:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T04:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T04:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T05:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
+2026-10-03T05:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),visib,10.0,km,visibility,Sichtweite (10 km = 10 km oder mehr)
 2026-10-02T06:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),wdir,250.0,°,wind_direction,Windrichtung
 2026-10-02T06:50:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),wdir,250.0,°,wind_direction,Windrichtung
 2026-10-02T07:20:00Z,instant,0,metar,LSZH,Zürich Flughafen (METAR),wdir,250.0,°,wind_direction,Windrichtung
@@ -2853,198 +2853,198 @@ time_utc,time_ref,interval_min,source,station_id,station_name,parameter,value,un
 2026-10-03T05:40:00Z,instant,0,meteoschweiz,UEB,Uetliberg (Turm),ta1tows0,5.9,°C,air_temperature,Lufttemperatur Turm; Momentanwert
 2026-10-03T05:50:00Z,instant,0,meteoschweiz,UEB,Uetliberg (Turm),ta1tows0,6.1,°C,air_temperature,Lufttemperatur Turm; Momentanwert
 2026-10-03T06:00:00Z,instant,0,meteoschweiz,UEB,Uetliberg (Turm),ta1tows0,6.2,°C,air_temperature,Lufttemperatur Turm; Momentanwert
-2026-10-02T06:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T07:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T08:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T09:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T10:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T11:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T12:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T13:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T14:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T15:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T16:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T17:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T18:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T19:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T20:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T21:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T22:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T23:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-03T00:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-03T01:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-03T02:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-03T03:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-03T04:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-03T05:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
-2026-10-02T06:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T07:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T08:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T09:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T10:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T11:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T12:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T13:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T14:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T15:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T16:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T17:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T18:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T19:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T20:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T21:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T22:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T23:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-03T00:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-03T01:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-03T02:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-03T03:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-03T04:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-03T05:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
-2026-10-02T06:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T07:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T08:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T09:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T10:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T11:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T12:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T13:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T14:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T15:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T16:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T17:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T18:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T19:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T20:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T21:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T22:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T23:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-03T00:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-03T01:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-03T02:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-03T03:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-03T04:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-03T05:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
-2026-10-02T06:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,8.2,°C,air_temperature,Lufttemperatur
-2026-10-02T07:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,9.0,°C,air_temperature,Lufttemperatur
-2026-10-02T08:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,10.0,°C,air_temperature,Lufttemperatur
-2026-10-02T09:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,11.0,°C,air_temperature,Lufttemperatur
-2026-10-02T10:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,12.0,°C,air_temperature,Lufttemperatur
-2026-10-02T11:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,13.0,°C,air_temperature,Lufttemperatur
-2026-10-02T12:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,13.8,°C,air_temperature,Lufttemperatur
-2026-10-02T13:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,14.5,°C,air_temperature,Lufttemperatur
-2026-10-02T14:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,14.9,°C,air_temperature,Lufttemperatur
-2026-10-02T15:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,15.0,°C,air_temperature,Lufttemperatur
-2026-10-02T16:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,14.9,°C,air_temperature,Lufttemperatur
-2026-10-02T17:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,14.5,°C,air_temperature,Lufttemperatur
-2026-10-02T18:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,13.8,°C,air_temperature,Lufttemperatur
-2026-10-02T19:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,13.0,°C,air_temperature,Lufttemperatur
-2026-10-02T20:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,12.0,°C,air_temperature,Lufttemperatur
-2026-10-02T21:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,11.0,°C,air_temperature,Lufttemperatur
-2026-10-02T22:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,10.0,°C,air_temperature,Lufttemperatur
-2026-10-02T23:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,9.0,°C,air_temperature,Lufttemperatur
-2026-10-03T00:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,8.2,°C,air_temperature,Lufttemperatur
-2026-10-03T01:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.5,°C,air_temperature,Lufttemperatur
-2026-10-03T02:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.1,°C,air_temperature,Lufttemperatur
-2026-10-03T03:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.0,°C,air_temperature,Lufttemperatur
-2026-10-03T04:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.1,°C,air_temperature,Lufttemperatur
-2026-10-03T05:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.5,°C,air_temperature,Lufttemperatur
-2026-10-02T06:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T07:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T08:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T09:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T10:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T11:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T12:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T13:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T14:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T15:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T16:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T17:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T18:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T19:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T20:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T21:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T22:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T23:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-03T00:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-03T01:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-03T02:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-03T03:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-03T04:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-03T05:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
-2026-10-02T06:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T07:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T08:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T09:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T10:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T11:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T12:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T13:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T14:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T15:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T16:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T17:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T18:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T19:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T20:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T21:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T22:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T23:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-03T00:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-03T01:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-03T02:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-03T03:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-03T04:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-03T05:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
-2026-10-02T06:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T07:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T08:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T09:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T10:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T11:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T12:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T13:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T14:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T15:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T16:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T17:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T18:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T19:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T20:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T21:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T22:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T23:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-03T00:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-03T01:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-03T02:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-03T03:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-03T04:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-03T05:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
-2026-10-02T06:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T07:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T08:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T09:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T10:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T11:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T12:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T13:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T14:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T15:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T16:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T17:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T18:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T19:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T20:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T21:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T22:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-02T23:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-03T00:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-03T01:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-03T02:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-03T03:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-03T04:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
-2026-10-03T05:00:00Z,unknown,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T06:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T07:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T08:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T09:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T10:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T11:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T12:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T13:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T14:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T15:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T16:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T17:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T18:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T19:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T20:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T21:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T22:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T23:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-03T00:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-03T01:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-03T02:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-03T03:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-03T04:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-03T05:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),Hr,75.0,%Hr,relative_humidity,Relative Luftfeuchtigkeit
+2026-10-02T06:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T07:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T08:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T09:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T10:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T11:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T12:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T13:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T14:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T15:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T16:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T17:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T18:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T19:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T20:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T21:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T22:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T23:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-03T00:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-03T01:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-03T02:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-03T03:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-03T04:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-03T05:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),RainDur,0.0,min,rain_duration,Niederschlagsdauer
+2026-10-02T06:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T07:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T08:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T09:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T10:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T11:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T12:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T13:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T14:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T15:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T16:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T17:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T18:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T19:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T20:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T21:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T22:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T23:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-03T00:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-03T01:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-03T02:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-03T03:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-03T04:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-03T05:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),StrGlo,100.0,W/m2,global_radiation,Globalstrahlung
+2026-10-02T06:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,8.2,°C,air_temperature,Lufttemperatur
+2026-10-02T07:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,9.0,°C,air_temperature,Lufttemperatur
+2026-10-02T08:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,10.0,°C,air_temperature,Lufttemperatur
+2026-10-02T09:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,11.0,°C,air_temperature,Lufttemperatur
+2026-10-02T10:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,12.0,°C,air_temperature,Lufttemperatur
+2026-10-02T11:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,13.0,°C,air_temperature,Lufttemperatur
+2026-10-02T12:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,13.8,°C,air_temperature,Lufttemperatur
+2026-10-02T13:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,14.5,°C,air_temperature,Lufttemperatur
+2026-10-02T14:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,14.9,°C,air_temperature,Lufttemperatur
+2026-10-02T15:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,15.0,°C,air_temperature,Lufttemperatur
+2026-10-02T16:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,14.9,°C,air_temperature,Lufttemperatur
+2026-10-02T17:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,14.5,°C,air_temperature,Lufttemperatur
+2026-10-02T18:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,13.8,°C,air_temperature,Lufttemperatur
+2026-10-02T19:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,13.0,°C,air_temperature,Lufttemperatur
+2026-10-02T20:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,12.0,°C,air_temperature,Lufttemperatur
+2026-10-02T21:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,11.0,°C,air_temperature,Lufttemperatur
+2026-10-02T22:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,10.0,°C,air_temperature,Lufttemperatur
+2026-10-02T23:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,9.0,°C,air_temperature,Lufttemperatur
+2026-10-03T00:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,8.2,°C,air_temperature,Lufttemperatur
+2026-10-03T01:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.5,°C,air_temperature,Lufttemperatur
+2026-10-03T02:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.1,°C,air_temperature,Lufttemperatur
+2026-10-03T03:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.0,°C,air_temperature,Lufttemperatur
+2026-10-03T04:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.1,°C,air_temperature,Lufttemperatur
+2026-10-03T05:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),T,7.5,°C,air_temperature,Lufttemperatur
+2026-10-02T06:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T07:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T08:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T09:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T10:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T11:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T12:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T13:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T14:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T15:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T16:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T17:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T18:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T19:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T20:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T21:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T22:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T23:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-03T00:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-03T01:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-03T02:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-03T03:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-03T04:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-03T05:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WD,270.0,°,wind_direction,Windrichtung
+2026-10-02T06:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T07:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T08:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T09:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T10:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T11:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T12:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T13:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T14:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T15:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T16:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T17:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T18:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T19:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T20:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T21:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T22:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T23:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-03T00:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-03T01:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-03T02:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-03T03:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-03T04:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-03T05:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVs,2.5,m/s,wind_speed,Windgeschwindigkeit skalar
+2026-10-02T06:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T07:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T08:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T09:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T10:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T11:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T12:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T13:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T14:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T15:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T16:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T17:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T18:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T19:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T20:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T21:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T22:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T23:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-03T00:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-03T01:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-03T02:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-03T03:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-03T04:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-03T05:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),WVv,1.9,m/s,wind_speed_vector,Windgeschwindigkeit vektoriell
+2026-10-02T06:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T07:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T08:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T09:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T10:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T11:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T12:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T13:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T14:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T15:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T16:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T17:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T18:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T19:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T20:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T21:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T22:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-02T23:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-03T00:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-03T01:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-03T02:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-03T03:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-03T04:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
+2026-10-03T05:00:00Z,interval_start,60,ugz,Zch_Stampfenbachstrasse,Stampfenbachstrasse (UGZ),p,965.1,hPa,pressure_qfe,Luftdruck
 2026-10-02T06:00:00Z,unknown,10,wapo,mythenquai,Mythenquai (WaPo),air_temperature,9.2,°C,air_temperature,Lufttemperatur 2 m
 2026-10-02T06:10:00Z,unknown,10,wapo,mythenquai,Mythenquai (WaPo),air_temperature,9.3,°C,air_temperature,Lufttemperatur 2 m
 2026-10-02T06:20:00Z,unknown,10,wapo,mythenquai,Mythenquai (WaPo),air_temperature,9.4,°C,air_temperature,Lufttemperatur 2 m

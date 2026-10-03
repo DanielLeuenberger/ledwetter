@@ -48,6 +48,14 @@ def request_key(method: str, url: str, data) -> str:
     return f"{method} {url} {json.dumps(data or {}, sort_keys=True, default=str)}"
 
 
+_TIME_RE = re.compile(r"\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(:\d{2})?(\.\d+)?Z?")
+
+
+def loose_key(method: str, url: str, data) -> str:
+    """Request key with all ISO timestamps removed, used when the exact key is not in a recording."""
+    return _TIME_RE.sub("<t>", request_key(method, url, data))
+
+
 def _slug(url: str) -> str:
     name = url.rstrip("/").rsplit("/", 1)[-1] or "response"
     return re.sub(r"[^A-Za-z0-9._-]+", "_", name)[:80]
@@ -124,15 +132,20 @@ class ReplayHttpClient:
     def __init__(self, directory: str | Path):
         self.dir = Path(directory)
         self.entries: dict = {}
+        self.loose: dict = {}
         for line in (self.dir / "index.jsonl").read_text(encoding="utf-8").splitlines():
             if line.strip():
                 e = json.loads(line)
                 self.entries[e["key"]] = e   # the latest recording of a request wins
+                self.loose.setdefault(loose_key(e["method"], e["url"], e["data"]), []).append(e)
         self.misses: list = []
 
     def _lookup(self, method: str, url: str, data) -> ReplayResponse:
         key = hashlib.sha1(request_key(method, url, data).encode()).hexdigest()
         e = self.entries.get(key)
+        if e is None:  # e.g. a query whose time window depends on the clock: match without timestamps
+            candidates = self.loose.get(loose_key(method, url, data), [])
+            e = candidates.pop(0) if candidates else None
         if e is None:
             self.misses.append((method, url, data))
             return ReplayResponse(b"", 404, url)

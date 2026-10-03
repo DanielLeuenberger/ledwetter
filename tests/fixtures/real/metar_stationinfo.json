@@ -1,0 +1,389 @@
+[
+ {
+  "id": "EDNY",
+  "icaoId": "EDNY",
+  "iataId": "FDH",
+  "faaId": null,
+  "wmoId": "10935",
+  "site": "Friedrichshafen Arpt",
+  "lat": 47.671,
+  "lon": 9.511,
+  "elev": 411,
+  "state": "BW",
+  "country": "DE",
+  "priority": 3,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "EDTZ",
+  "icaoId": "EDTZ",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": null,
+  "site": "Konstanz Arpt",
+  "lat": 47.681,
+  "lon": 9.141,
+  "elev": 401,
+  "state": "BW",
+  "country": "DE",
+  "priority": 9,
+  "siteType": []
+ },
+ {
+  "id": "LSGC",
+  "icaoId": "LSGC",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": null,
+  "site": "Les Eplatures Arpt",
+  "lat": 47.083,
+  "lon": 6.792,
+  "elev": 1018,
+  "state": "NE",
+  "country": "CH",
+  "priority": 4,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSGG",
+  "icaoId": "LSGG",
+  "iataId": "GVA",
+  "faaId": null,
+  "wmoId": "06700",
+  "site": "Geneva/Cointrin Arpt",
+  "lat": 46.248,
+  "lon": 6.128,
+  "elev": 411,
+  "state": "GE",
+  "country": "CH",
+  "priority": 1,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSGL",
+  "icaoId": "LSGL",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": null,
+  "site": "Lausanne Arpt",
+  "lat": 46.546,
+  "lon": 6.617,
+  "elev": 613,
+  "state": "VD",
+  "country": "CH",
+  "priority": 9,
+  "siteType": [
+   "METAR"
+  ]
+ },
+ {
+  "id": "LSGN",
+  "icaoId": "LSGN",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": "06604",
+  "site": "Neuchatel Arpt",
+  "lat": 46.955,
+  "lon": 6.866,
+  "elev": 431,
+  "state": "NE",
+  "country": "CH",
+  "priority": 9,
+  "siteType": [
+   "METAR"
+  ]
+ },
+ {
+  "id": "LSGS",
+  "icaoId": "LSGS",
+  "iataId": "SIR",
+  "faaId": null,
+  "wmoId": "06720",
+  "site": "Sion Arpt",
+  "lat": 46.219,
+  "lon": 7.33,
+  "elev": 482,
+  "state": "VS",
+  "country": "CH",
+  "priority": 3,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSMA",
+  "icaoId": "LSMA",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": "06658",
+  "site": "Alpnach Arpt",
+  "lat": 46.943,
+  "lon": 8.286,
+  "elev": 441,
+  "state": "OW",
+  "country": "CH",
+  "priority": 6,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSMC",
+  "icaoId": "LSMC",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": null,
+  "site": "Ulrichen Arpt",
+  "lat": 46.505,
+  "lon": 8.308,
+  "elev": 1347,
+  "state": "VA",
+  "country": "CH",
+  "priority": 5,
+  "siteType": [
+   "METAR"
+  ]
+ },
+ {
+  "id": "LSMD",
+  "icaoId": "LSMD",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": null,
+  "site": "Dübendorf Arpt",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "state": "ZH",
+  "country": "CH",
+  "priority": 6,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSME",
+  "icaoId": "LSME",
+  "iataId": "EML",
+  "faaId": null,
+  "wmoId": null,
+  "site": "Emmen Arpt",
+  "lat": 47.092,
+  "lon": 8.305,
+  "elev": 427,
+  "state": "LU",
+  "country": "CH",
+  "priority": 3,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSMM",
+  "icaoId": "LSMM",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": "06614",
+  "site": "Meiringen Arpt",
+  "lat": 46.743,
+  "lon": 8.11,
+  "elev": 570,
+  "state": "BE",
+  "country": "CH",
+  "priority": 5,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSMP",
+  "icaoId": "LSMP",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": null,
+  "site": "Payerne Arpt",
+  "lat": 46.844,
+  "lon": 6.916,
+  "elev": 490,
+  "state": "VD",
+  "country": "CH",
+  "priority": 5,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSMS",
+  "icaoId": "LSMS",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": null,
+  "site": "Sion Arpt",
+  "lat": 46.22,
+  "lon": 7.32,
+  "elev": 481,
+  "state": "VS",
+  "country": "CH",
+  "priority": 9,
+  "siteType": []
+ },
+ {
+  "id": "LSZA",
+  "icaoId": "LSZA",
+  "iataId": "LUG",
+  "faaId": null,
+  "wmoId": "06770",
+  "site": "Lugano Arpt",
+  "lat": 46.004,
+  "lon": 8.91,
+  "elev": 276,
+  "state": "TI",
+  "country": "CH",
+  "priority": 4,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSZB",
+  "icaoId": "LSZB",
+  "iataId": "BRN",
+  "faaId": null,
+  "wmoId": null,
+  "site": "Bern Arpt",
+  "lat": 46.914,
+  "lon": 7.497,
+  "elev": 510,
+  "state": "BE",
+  "country": "CH",
+  "priority": 4,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSZC",
+  "icaoId": "LSZC",
+  "iataId": "BXO",
+  "faaId": null,
+  "wmoId": null,
+  "site": "Buochs Arpt",
+  "lat": 46.972,
+  "lon": 8.392,
+  "elev": 445,
+  "state": "NW",
+  "country": "CH",
+  "priority": 6,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSZG",
+  "icaoId": "LSZG",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": null,
+  "site": "Grenchen Arpt",
+  "lat": 47.179,
+  "lon": 7.415,
+  "elev": 428,
+  "state": "SO",
+  "country": "CH",
+  "priority": 5,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSZH",
+  "icaoId": "LSZH",
+  "iataId": "ZRH",
+  "faaId": null,
+  "wmoId": "06670",
+  "site": "Zürich Intl Arpt",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "state": "ZH",
+  "country": "CH",
+  "priority": 4,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSZL",
+  "icaoId": "LSZL",
+  "iataId": null,
+  "faaId": null,
+  "wmoId": "06762",
+  "site": "Locarno Arpt",
+  "lat": 46.164,
+  "lon": 8.878,
+  "elev": 198,
+  "state": "TI",
+  "country": "CH",
+  "priority": 6,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSZR",
+  "icaoId": "LSZR",
+  "iataId": "ACH",
+  "faaId": null,
+  "wmoId": null,
+  "site": "Rheineck/Altenrhein",
+  "lat": 47.485,
+  "lon": 9.561,
+  "elev": 396,
+  "state": "SG",
+  "country": "CH",
+  "priority": 5,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ },
+ {
+  "id": "LSZS",
+  "icaoId": "LSZS",
+  "iataId": "SMV",
+  "faaId": null,
+  "wmoId": null,
+  "site": "Samedan Arpt",
+  "lat": 46.526,
+  "lon": 9.879,
+  "elev": 1708,
+  "state": "GR",
+  "country": "CH",
+  "priority": 3,
+  "siteType": [
+   "METAR",
+   "TAF"
+  ]
+ }
+]

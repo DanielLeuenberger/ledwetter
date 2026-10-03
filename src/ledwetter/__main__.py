@@ -115,7 +115,8 @@ def main(argv=None) -> None:
             log.info("Replay: clock set to %s", recorded.isoformat())
     elif args.record:
         http = RecordingHttpClient(args.record, *http_args)
-        write_run_info(args, cfg)
+        started = write_run_info(args, cfg)
+        clock = lambda: started   # frozen, so that a replay produces exactly the same requests
     else:
         http = HttpClient(*http_args)
 
@@ -157,11 +158,12 @@ def recording_time(directory: str):
 
 def write_run_info(args, cfg: dict) -> None:
     """Context of a recording: command, versions, time and the configuration used."""
-    info = {"command": vars(args), "started_utc": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+    info = {"command": vars(args), "started_utc": datetime.now(timezone.utc).replace(microsecond=0).isoformat(),
             "ledwetter": __version__, "python": platform.python_version(), "pandas": pd.__version__,
             "platform": platform.platform(), "config": cfg}
     path = Path(args.record) / "run_info.json"
     path.write_text(json.dumps(info, indent=1, ensure_ascii=False, default=str), encoding="utf-8")
+    return datetime.fromisoformat(info["started_utc"])
 
 
 if __name__ == "__main__":

@@ -2,8 +2,10 @@
 
 Collections: ogd-smn (weather stations), ogd-smn-tower (tower stations), ogd-smn-precip (precipitation stations).
 10-minute files; the timestamp is the end of the 10-minute interval, UTC. CSV with ';', Windows-1252,
-'dd.mm.yyyy HH:MM'. Files per station: t_historical_<decade>, t_recent (1 January to yesterday),
-t_now (from yesterday 12 UTC). The station's STAC item lists which files exist.
+'dd.mm.yyyy HH:MM'. Files per station: t_historical_<decade>, t_recent (1 January to yesterday 23:50 UTC),
+t_now (current day from 00:00 UTC, as observed in a diagnostic run; the documentation mentions
+yesterday 12 UTC, so the code assumes the earlier start and may load 'recent' as well — harmless,
+duplicates are merged). The station's STAC item lists which files exist.
 
 All parameter columns are extracted. Descriptions, units and groups come from the official
 <collection>_meta_parameters.csv. Parameter codes encode their type at position 7:
@@ -40,8 +42,9 @@ QUANTITY = {
     "fu3010z1": "wind_gust", "fu1towz1": "wind_gust", "fu3towz1": "wind_gust", "htoauts0": "snow_depth",
     "tso005s0": "soil_temperature_5cm", "tso010s0": "soil_temperature_10cm", "tso020s0": "soil_temperature_20cm",
 }
-# m/s columns that duplicate a km/h column of the same measurement (kept only if the km/h one is missing)
-MS_DUPLICATES = [(r"^fkl010(z\d)$", ("fu3010{}",)), (r"^fk\dtow(z\d)$", ("fu3tow{}", "fu1tow{}"))]
+# m/s columns that duplicate a km/h column of the same measurement (kept only if the km/h one is missing).
+# The tower network uses both 'fk1tow…' and 'fkltow…' (e.g. fk1towz0, fkltowz1 in the official metadata).
+MS_DUPLICATES = [(r"^fkl010(z\d)$", ("fu3010{}",)), (r"^fk[l1]tow(z\d)$", ("fu3tow{}", "fu1tow{}"))]
 
 
 def time_reference(code: str) -> tuple:

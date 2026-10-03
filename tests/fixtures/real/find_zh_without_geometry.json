@@ -1,0 +1,22 @@
+{
+ "results": [
+  {
+   "featureId": 1,
+   "bbox": [
+    8.351853,
+    47.162404,
+    8.995778,
+    47.690268
+   ],
+   "layerBodId": "ch.swisstopo.swissboundaries3d-kanton-flaeche.fill",
+   "layerName": "Kantonsgrenzen",
+   "id": 1,
+   "attributes": {
+    "ak": "ZH",
+    "name": "Zürich",
+    "flaeche": 172894.0,
+    "label": "Zürich"
+   }
+  }
+ ]
+}

@@ -73,13 +73,15 @@ The command-line help, log messages and the web interface are in German.
 | Source | Parameters (all are extracted) | Time reference | History | Status |
 |---|---|---|---|---|
 | MeteoSwiss SwissMetNet (OGD, data.geo.admin.ch): weather, tower and precipitation networks | every column of the 10-minute files, e.g. temperature 2 m / 5 cm / surface, dew point, humidity, vapour pressure, QFE/QFF/QNH, 850/700 hPa geopotential, precipitation, sunshine, global/diffuse/long-wave/reflected radiation, wind direction/speed/gusts, snow depth, soil temperature, foehn index; descriptions and units from the official `*_meta_parameters.csv` | codes `…s0` instantaneous, `…z0/z1/z3` 10-min interval end | from 2000 (10-min files) | file format and parameter list verified |
-| Zurich water police (OGD CSV + Tecdottir API) | air and water temperature, wind speed/gust/force/direction, windchill, QFE, precipitation, dew point, global radiation, humidity, lake level (radiation, precipitation and level at Mythenquai only) | `*_10min` interval end, others unknown | from 2007 | OGD columns verified; Tecdottir JSON not checked live |
-| FOEN/BAFU hydrology (data.bafu.admin.ch, GraphQL) | all parameters per station, usually W (water level), Q (discharge), WT (water temperature) | 10-min mean, interval start | per `coverageFrom` | API documentation verified |
-| City of Zurich UGZ (OGD) | T, Hr, p, RainDur, StrGlo, WD, WVs, WVv at Stampfenbach-, Schimmel- and Rosengartenstrasse | hourly, reference unknown | from 1992 | parameters and stations verified; interval reference open |
-| METAR (aviationweather.gov) | temperature, dew point, wind direction/speed/gust, visibility, QNH, QFF | observation time | a few days | schema verified; temperature in whole degrees |
+| Zurich water police (OGD CSV + Tecdottir API) | air and water temperature, wind speed/gust/force/direction, windchill, QFE, precipitation, dew point, global radiation, humidity, lake level (radiation, precipitation and level at Mythenquai only) | `*_10min` interval end, others unknown | from 2007 | verified with real responses; the API lags about 2–3 hours |
+| FOEN/BAFU hydrology (data.bafu.admin.ch, GraphQL) | all parameters per station, usually W (water level), Q (discharge), WT (water temperature) | 10-min mean, interval start | per `coverageFrom` | verified with real responses; 10-min means lag about 1.5 hours |
+| City of Zurich UGZ (OGD) | T, Hr, p, RainDur, WD, WVs, WVv at Stampfenbach-, Schimmel- and Rosengartenstrasse (StrGlo at Stampfenbachstrasse); T, Hr, p at Heubeeribüel | hourly, timestamp = start of the hour | from 1992 | verified with real responses; time reference determined against MeteoSwiss radiation |
+| METAR (aviationweather.gov) | temperature, dew point, wind direction/speed/gust, visibility (km; 10 = 10 km or more), QNH, QFF | observation time | a few days | verified with real responses; temperature in whole degrees; no direction for calm or variable wind |
 
-MeteoSwiss publishes the m/s variants of its wind parameters (`fkl010z*`, `fk1tow*`) in addition to the
-km/h ones; the m/s duplicates are skipped when the km/h column exists.
+MeteoSwiss publishes the m/s variants of its wind parameters (`fkl010z*`, `fk1towz0`, `fkltowz1`) in addition
+to the km/h ones; the m/s duplicates are skipped when the km/h column exists. Uetliberg (UEB) appears in the
+weather network (radiation and sunshine only) and in the tower network; both files carry identical radiation
+and sunshine values, which are stored once.
 
 Deliberately **not** included: scraping tecson-data.ch (prohibited by its terms), NABEL Zürich-Kaserne
 (no open meteorological API).
@@ -155,7 +157,9 @@ separate database `diagnose/diagnose.db` and writes:
 - `summary.csv` with every stored series: count, time range, value range, unit, aggregation method,
 - `diagnose.log`, `stations_zh.yaml` and `run_info.json` (command, versions, configuration).
 
-The general options `--record DIR` and `--replay DIR` work with every command. `--replay` answers all requests
+The general options `--record DIR` and `--replay DIR` work with every command. While recording, the clock is
+frozen at the start time so that time-dependent requests can be replayed; requests that still differ only in
+their timestamps are matched without them. `--replay` answers all requests
 from a recording without network access and sets the clock to the time of the recording, so a run can be
 reproduced exactly elsewhere, for example `python -m ledwetter --replay diagnose diagnose --out check`.
 Recordings contain only public data and no credentials.
@@ -230,7 +234,8 @@ UPDATE_GOLDEN=1 pytest -m regression   # rewrite the references after an intenti
 - **Regression tests** replay recorded responses of all sources (`tests/fixtures`) and compare the CSV
   export and the aggregates with stored references. A real MeteoSwiss file excerpt additionally guards
   the file format.
-- Apart from that excerpt the fixtures are synthetic but follow the documented formats;
+- `tests/regression/test_real_data.py` runs the parsers on real responses of all sources, recorded in a
+  diagnostic run (`tests/fixtures/real`). The remaining fixtures are synthetic but follow the real formats;
   `tests/fixtures/make_fixtures.py` regenerates them. The tests run without network access.
 - GitHub Actions runs the tests on every push (Python 3.10 and 3.12).
 
@@ -255,8 +260,10 @@ conda/meta.yaml   conda-build recipe
 tests/unit, tests/regression, tests/fixtures
 ```
 
-## Open points
+## Verification status
 
-Only a real run (`python -m ledwetter update -v`) will settle: the exact JSON of the Tecdottir API,
-the interval reference of the UGZ data, the attribute names of the geo services (identify, find) and of the
-METAR station info service used for station discovery, and which parameters each BAFU station delivers. The log names missing locations, stations and metadata.
+A diagnostic run on 3 October 2026 (canton ZH: 37 stations, 241 series, about 17,000 values) confirmed the
+formats of all sources and the geo and METAR station services. Cross-checks: the lake level of the water
+police (405.26–405.27 m) matches the FOEN station Zürichsee (405.25 m); hourly global radiation of UGZ
+Stampfenbachstrasse matches MeteoSwiss Fluntern within 9 W/m² RMS when the UGZ timestamp is taken as the start
+of the hour. Still open: whether the water police's non-10-minute parameters are instantaneous values or means.

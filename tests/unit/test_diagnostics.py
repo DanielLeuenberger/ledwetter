@@ -84,6 +84,18 @@ def test_replay_answers_recorded_requests_and_404_otherwise(tmp_path):
     assert replay.misses == [("GET", url, {"ids": "LSZB", "format": "json", "hours": 3})]
 
 
+def test_replay_matches_time_dependent_queries_without_timestamps(tmp_path):
+    client = recording_client(tmp_path / "rec")
+    q = ('{ water { observations { data_10min_mean(where: {station: {no: {_in: ["2099"]}}, '
+         'timestamp: {_gte: "2026-10-03T00:00:00Z", _lt: "2026-10-03T06:01:00Z"}}) { timestamp value } } } }')
+    original = client.post_json("https://data.bafu.admin.ch/api", {"query": q})
+    assert original["data"]["water"]["observations"]["data_10min_mean"]
+    replay = ReplayHttpClient(tmp_path / "rec")
+    shifted = q.replace("06:01:00Z", "06:01:34Z")   # same query, clock 34 s later
+    assert replay.post_json("https://data.bafu.admin.ch/api", {"query": shifted}) == original
+    assert replay.misses == []
+
+
 def test_diagnose_run_and_exact_replay(tmp_path, clock):
     out = tmp_path / "diagnose"
     archive = diagnose.run(recording_client(out), {}, str(out), "ZH", SINCE, clock)

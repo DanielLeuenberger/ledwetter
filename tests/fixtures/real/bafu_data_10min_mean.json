@@ -1,0 +1,1522 @@
+{
+ "data": {
+  "water": {
+   "observations": {
+    "data_10min_mean": [
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 354.577,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 354.577,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 354.577,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 4.619,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 4.619,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 4.619,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 4.597,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 4.597,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 4.597,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 17.42,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 17.47,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 17.52,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 354.576,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 354.576,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 354.576,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 17.24,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 17.3,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 17.36,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 412.229,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 412.229,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 412.229,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 1.921,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 1.921,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 1.921,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 1.921,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 1.921,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 1.921,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 412.229,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 412.229,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 412.229,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 1.731,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 1.736,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 1.741,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 1.741,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 1.746,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 1.761,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 17.55,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 17.6,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 17.65,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 335.405,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 17.39,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 17.45,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 17.49,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 399.502,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 399.502,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 399.502,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 21.937,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 21.951,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 21.951,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 21.951,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 21.977,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 21.951,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 399.502,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 399.503,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 399.502,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 405.248,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 405.248,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 405.25,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 405.25,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 405.25,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 405.249,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 20.0,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 20.0,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 20.01,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 20.03,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 20.03,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 20.02,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 388.393,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 388.394,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 388.395,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:00:00Z",
+      "value": 1.031,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:10:00Z",
+      "value": 1.044,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:20:00Z",
+      "value": 1.054,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 1.058,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 1.067,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 1.067,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:30:00Z",
+      "value": 388.395,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:40:00Z",
+      "value": 388.396,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T10:50:00Z",
+      "value": 388.396,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 354.578,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 354.578,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 354.578,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 17.13,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 17.16,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 17.2,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 354.577,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 354.577,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 354.577,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 4.619,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 4.619,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 4.619,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 4.649,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 4.649,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 4.642,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 17.07,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 17.09,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 17.11,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2044"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 412.228,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 412.228,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 412.228,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 412.228,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 412.229,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 412.229,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 1.898,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 1.915,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 1.921,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 1.898,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 1.898,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 1.898,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2176"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 335.405,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 17.14,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 17.22,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 17.32,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 335.404,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 335.403,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 1.731,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 1.736,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 1.72,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 1.751,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 1.741,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 1.741,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 16.99,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 17.03,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 17.07,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2415"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 399.501,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 399.501,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 399.501,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 399.501,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 399.501,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 399.501,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 21.897,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 21.897,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 21.897,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 21.897,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 21.897,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 21.897,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2099"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 405.248,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 405.248,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 405.249,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 405.249,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 405.248,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 405.248,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2209"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 19.95,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 19.95,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 19.99,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 19.9,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 19.92,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 19.94,
+      "parameterName": "WT",
+      "unitSymbol": "°C",
+      "station": {
+       "no": "2392"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 388.386,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 388.388,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 388.389,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 388.39,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 388.392,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 388.392,
+      "parameterName": "W",
+      "unitSymbol": "m ü.M.",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:30:00Z",
+      "value": 0.985,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:40:00Z",
+      "value": 1.014,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:50:00Z",
+      "value": 1.011,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:00:00Z",
+      "value": 0.941,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:10:00Z",
+      "value": 0.966,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     },
+     {
+      "timestamp": "2026-10-03T09:20:00Z",
+      "value": 0.979,
+      "parameterName": "Q",
+      "unitSymbol": "m3/s",
+      "station": {
+       "no": "2132"
+      }
+     }
+    ]
+   }
+  }
+ }
+}

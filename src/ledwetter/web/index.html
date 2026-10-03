@@ -155,9 +155,9 @@ const COLORS = ["#1F6F8B", "#5C8A3A", "#B5861B", "#7A4E8C", "#2F5D50", "#A8452F"
 const AGG_LABEL = { raw: "Rohdaten", hour: "Stundenwerte", day: "Tageswerte" };
 const METHOD = { mean: "Mittel", sum: "Summe", max: "Maximum", min: "Minimum", dir: "Vektormittel" };
 // Display units: wind is converted to km/h so that sources can be compared; other units are shown as delivered
-const CONVERT = { wind_speed: "km/h", wind_gust: "km/h", wind_speed_vector: "km/h", visibility: "km" };
+const CONVERT = { wind_speed: "km/h", wind_gust: "km/h", wind_speed_vector: "km/h" };
 const FACTORS = { "m/s>km/h": 3.6, "kt>km/h": 1.852, "km/h>km/h": 1, "SM>km": 1.609344 };
-const UNIT_ALIASES = { "W/m2": "W/m²", "%Hr": "%" };
+const UNIT_ALIASES = { "W/m2": "W/m²", "%Hr": "%", "m3/s": "m³/s" };
 const $ = (id) => document.getElementById(id);
 const state = { series: [], stations: new Map() };
 

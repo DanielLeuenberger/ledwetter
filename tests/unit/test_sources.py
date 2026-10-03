@@ -165,7 +165,7 @@ class TestUgz:
         df = collect(src)
         assert params(df) == {"T", "Hr", "p", "RainDur", "StrGlo", "WD", "WVs", "WVv"}
         assert set(df[df["parameter"] == "WVs"]["value"]) == {2.5} and set(df[df["parameter"] == "WVs"]["unit"]) == {"m/s"}
-        assert (df["interval_min"] == 60).all() and (df["time_ref"] == "unknown").all()
+        assert (df["interval_min"] == 60).all() and (df["time_ref"] == "interval_start").all()
         assert src.describe("RainDur").agg == "sum" and src.describe("WD").agg == "dir"
 
     def test_missing_standort_is_reported(self, fake_http, clock, caplog):
@@ -181,7 +181,7 @@ class TestMetar:
         df = collect(src)
         assert set(df["station_id"]) == {"LSZH"}
         assert params(df) == {"temp", "dewp", "wdir", "wspd", "visib", "altim"}  # wgst/slp empty
-        assert set(df[df["parameter"] == "wspd"]["unit"]) == {"kt"} and set(df[df["parameter"] == "visib"]["value"]) == {6.0}
+        assert set(df[df["parameter"] == "wspd"]["unit"]) == {"kt"} and set(df[df["parameter"] == "visib"]["value"]) == {10.0}
         assert len(df[df["parameter"] == "wdir"]) < len(df[df["parameter"] == "temp"])  # VRB dropped
 
     def test_hours_capped(self, clock, caplog):

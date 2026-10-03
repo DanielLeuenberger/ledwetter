@@ -1,7 +1,10 @@
 """METAR via aviationweather.gov (NOAA, no API key).
 
 obsTime = observation time (Unix seconds). Extracted numeric fields: temp, dewp (°C), wdir (°),
-wspd, wgst (kt), visib (statute miles, '10+' -> 10), altim (QNH, hPa), slp (QFF, hPa).
+wspd, wgst (kt), visib, altim (QNH, hPa), slp (QFF, hPa).
+- Wind direction is dropped for variable wind ('VRB') and for calm (wspd 0, reported as direction 0).
+- Visibility is delivered in statute miles and converted to km; '6+' (10 km or more, METAR 9999) is
+  stored as 10 km, i.e. as a lower bound.
 The API keeps only a few days of archive; older periods return nothing.
 """
 from __future__ import annotations
@@ -32,7 +35,7 @@ class MetarAWC(Source):
         "wdir": ("Windrichtung", "°", "Wind", "dir", "wind_direction"),
         "wspd": ("Windgeschwindigkeit", "kt", "Wind", "mean", "wind_speed"),
         "wgst": ("Windböen", "kt", "Wind", "max", "wind_gust"),
-        "visib": ("Sichtweite", "SM", "Sicht", "mean", "visibility"),
+        "visib": ("Sichtweite (10 km = 10 km oder mehr)", "km", "Sicht", "min", "visibility"),
         "altim": ("Luftdruck QNH", "hPa", "Druck", "mean", "pressure_qnh"),
         "slp": ("Luftdruck auf Meereshöhe", "hPa", "Druck", "mean", "pressure_qff"),
     }
@@ -45,8 +48,8 @@ class MetarAWC(Source):
             cls.defaults["station_url"], bbox=f"{lat0},{lon0},{lat1},{lon1}", format="json").json())
         out = []
         for s in stations or []:
-            site_types = s.get("siteType") or ["METAR"]
-            if "METAR" not in site_types or s.get("country") not in (None, "CH"):
+            site_types = s.get("siteType", ["METAR"])   # an empty list means: no reports
+            if "METAR" not in (site_types or []) or s.get("country") not in (None, "CH"):
                 continue
             try:
                 if ctx.geo.contains(canton, float(s["lat"]), float(s["lon"])):
@@ -58,6 +61,16 @@ class MetarAWC(Source):
 
     def history_start(self, st: Optional[dict] = None) -> datetime:
         return self.clock() - timedelta(hours=self.cfg["max_hours"])
+
+    @staticmethod
+    def visibility_km(v) -> Optional[float]:
+        if v is None or (isinstance(v, float) and math.isnan(v)):
+            return None
+        s = str(v).strip()
+        if s.endswith("+"):
+            return 10.0
+        x = to_float(s)
+        return None if x is None else round(x * 1.609344, 2)
 
     def hours_for(self, period: Period) -> int:
         hours = math.ceil((self.clock() - period.start).total_seconds() / 3600) + 1
@@ -73,6 +86,11 @@ class MetarAWC(Source):
         if df.empty:
             return
         df["t"] = pd.to_datetime(df["obsTime"], unit="s", utc=True)
+        if "wdir" in df.columns:
+            calm = pd.to_numeric(df.get("wspd"), errors="coerce") == 0
+            df.loc[calm, "wdir"] = None
+        if "visib" in df.columns:
+            df["visib"] = df["visib"].map(self.visibility_km)
         for icao, g in df.groupby("icaoId"):
             for code, info in self.catalog().items():
                 if code in g.columns:

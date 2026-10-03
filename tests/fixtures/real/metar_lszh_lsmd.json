@@ -1,0 +1,1568 @@
+[
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T11:53:17.928Z",
+  "obsTime": 1791028200,
+  "reportTime": "2026-10-03T12:00:00.000Z",
+  "temp": 21,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 2,
+  "altim": 1029,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 031150Z AUTO VRB02KT 9999NDV NCD 21/14 Q1029 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "CLR",
+  "clouds": []
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T11:52:11.296Z",
+  "obsTime": 1791028200,
+  "reportTime": "2026-10-03T12:00:00.000Z",
+  "temp": 21,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1029,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 031150Z VRB03KT 9999 FEW025 21/13 Q1029 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 2500
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T11:22:11.492Z",
+  "obsTime": 1791026400,
+  "reportTime": "2026-10-03T11:20:00.000Z",
+  "temp": 20,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 2,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 031120Z VRB02KT 9999 FEW025 20/14 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 2500
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T10:52:13.965Z",
+  "obsTime": 1791024600,
+  "reportTime": "2026-10-03T11:00:00.000Z",
+  "temp": 20,
+  "dewp": 14,
+  "wdir": 300,
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 031050Z 30003KT 260V040 9999 FEW022 20/14 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 2200
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T10:59:30.217Z",
+  "obsTime": 1791024600,
+  "reportTime": "2026-10-03T11:00:00.000Z",
+  "temp": 20,
+  "dewp": 14,
+  "wdir": 330,
+  "wspd": 3,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 031050Z AUTO 33003KT 290V010 9999NDV FEW200 20/14 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 20000
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T10:22:13.203Z",
+  "obsTime": 1791022800,
+  "reportTime": "2026-10-03T10:20:00.000Z",
+  "temp": 19,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 031020Z VRB03KT 9999 FEW021 19/14 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 2100
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T10:23:12.230Z",
+  "obsTime": 1791022800,
+  "reportTime": "2026-10-03T10:20:00.000Z",
+  "temp": 20,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 031020Z AUTO VRB02KT 9999NDV FEW200 20/14 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 20000
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T09:52:15.888Z",
+  "obsTime": 1791021000,
+  "reportTime": "2026-10-03T10:00:00.000Z",
+  "temp": 19,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 2,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030950Z VRB02KT 9999 FEW018 19/14 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 1800
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T09:53:23.415Z",
+  "obsTime": 1791021000,
+  "reportTime": "2026-10-03T10:00:00.000Z",
+  "temp": 20,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 1,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030950Z AUTO VRB01KT 9999NDV FEW140 20/14 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 14000
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T09:22:17.938Z",
+  "obsTime": 1791019200,
+  "reportTime": "2026-10-03T09:20:00.000Z",
+  "temp": 18,
+  "dewp": 14,
+  "wdir": 20,
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030920Z 02003KT 340V070 9999 FEW020 18/14 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 2000
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T08:53:26.907Z",
+  "obsTime": 1791017400,
+  "reportTime": "2026-10-03T09:00:00.000Z",
+  "temp": 18,
+  "dewp": 14,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030850Z AUTO 00000KT 9999NDV NCD 18/14 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "CLR",
+  "clouds": []
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T08:52:05.479Z",
+  "obsTime": 1791017400,
+  "reportTime": "2026-10-03T09:00:00.000Z",
+  "temp": 18,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 2,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030850Z VRB02KT 9999 FEW020 18/14 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 2000
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T08:23:15.412Z",
+  "obsTime": 1791015600,
+  "reportTime": "2026-10-03T08:20:00.000Z",
+  "temp": 17,
+  "dewp": 14,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030820Z AUTO 00000KT 9999NDV FEW160 17/14 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 16000
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T08:22:11.768Z",
+  "obsTime": 1791015600,
+  "reportTime": "2026-10-03T08:20:00.000Z",
+  "temp": 17,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030820Z VRB01KT 9999 FEW020 17/14 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 2000
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T07:52:08.297Z",
+  "obsTime": 1791013800,
+  "reportTime": "2026-10-03T08:00:00.000Z",
+  "temp": 17,
+  "dewp": 14,
+  "wdir": "VRB",
+  "wspd": 2,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030750Z VRB02KT CAVOK 17/14 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "CAVOK",
+  "clouds": [],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T07:53:05.473Z",
+  "obsTime": 1791013800,
+  "reportTime": "2026-10-03T08:00:00.000Z",
+  "temp": 16,
+  "dewp": 14,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030750Z AUTO 00000KT 9999NDV FEW005 16/14 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 500
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T07:22:14.022Z",
+  "obsTime": 1791012000,
+  "reportTime": "2026-10-03T07:20:00.000Z",
+  "temp": 16,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030720Z VRB01KT CAVOK 16/13 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "CAVOK",
+  "clouds": [],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T07:23:10.686Z",
+  "obsTime": 1791012000,
+  "reportTime": "2026-10-03T07:20:00.000Z",
+  "temp": 15,
+  "dewp": 13,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030720Z AUTO 00000KT 3200NDV SCT001 15/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 100
+   }
+  ]
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T06:53:08.331Z",
+  "obsTime": 1791010200,
+  "reportTime": "2026-10-03T07:00:00.000Z",
+  "temp": 13,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": 1.24,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030650Z AUTO VRB01KT 1100NDV R11/1100VP2000D R29/P2000N BKN001 13/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 100
+   }
+  ],
+  "fltCat": "LIFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T06:52:05.143Z",
+  "obsTime": 1791010200,
+  "reportTime": "2026-10-03T07:00:00.000Z",
+  "temp": 14,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030650Z VRB01KT CAVOK 14/13 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "CAVOK",
+  "clouds": [],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T06:23:18.675Z",
+  "obsTime": 1791008400,
+  "reportTime": "2026-10-03T06:20:00.000Z",
+  "temp": 12,
+  "dewp": 12,
+  "wdir": 130,
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030620Z AUTO 13002KT 9999NDV BKN001 BKN004 12/12 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 100
+   },
+   {
+    "cover": "BKN",
+    "base": 400
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T06:22:12.788Z",
+  "obsTime": 1791008400,
+  "reportTime": "2026-10-03T06:20:00.000Z",
+  "temp": 12,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030620Z VRB01KT CAVOK 12/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "CAVOK",
+  "clouds": [],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T05:53:07.574Z",
+  "obsTime": 1791006600,
+  "reportTime": "2026-10-03T06:00:00.000Z",
+  "temp": 12,
+  "dewp": 11,
+  "wdir": 140,
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030550Z AUTO 14002KT 9999NDV SCT001 SCT003 12/11 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 100
+   },
+   {
+    "cover": "SCT",
+    "base": 300
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T05:56:15.509Z",
+  "obsTime": 1791006600,
+  "reportTime": "2026-10-03T06:00:00.000Z",
+  "temp": 12,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": 5.59,
+  "altim": 1030,
+  "qcField": 16,
+  "wxString": "MIFG",
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030550Z VRB01KT 9000 4200NE MIFG FEW045 12/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 4500
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T05:28:12.520Z",
+  "obsTime": 1791004800,
+  "reportTime": "2026-10-03T05:20:00.000Z",
+  "temp": 12,
+  "dewp": 11,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030520Z AUTO 00000KT 9999NDV FEW002 SCT038 12/11 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 200
+   },
+   {
+    "cover": "SCT",
+    "base": 3800
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T05:26:09.236Z",
+  "obsTime": 1791004800,
+  "reportTime": "2026-10-03T05:20:00.000Z",
+  "temp": 12,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": 5.59,
+  "altim": 1030,
+  "qcField": 16,
+  "wxString": "MIFG",
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030520Z VRB01KT 9000 4000N MIFG SCT038 12/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 3800
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T04:52:13.099Z",
+  "obsTime": 1791003000,
+  "reportTime": "2026-10-03T05:00:00.000Z",
+  "temp": 11,
+  "dewp": 11,
+  "wdir": 250,
+  "wspd": 2,
+  "visib": 5.59,
+  "altim": 1029,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030450Z 25002KT 9000 SCT038 11/11 Q1029 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 3800
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T04:53:15.056Z",
+  "obsTime": 1791003000,
+  "reportTime": "2026-10-03T05:00:00.000Z",
+  "temp": 12,
+  "dewp": 12,
+  "wdir": 140,
+  "wspd": 1,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030450Z AUTO 14001KT 9999NDV SCT038 12/12 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 3800
+   }
+  ]
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T04:42:08.648Z",
+  "obsTime": 1791001200,
+  "reportTime": "2026-10-03T04:20:00.000Z",
+  "temp": 12,
+  "dewp": 12,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030420Z AUTO 00000KT 9999NDV NCD 12/12 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "CLR",
+  "clouds": []
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T04:23:25.617Z",
+  "obsTime": 1791001200,
+  "reportTime": "2026-10-03T04:20:00.000Z",
+  "temp": 12,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": 5.59,
+  "altim": 1029,
+  "qcField": 16,
+  "wxString": "MIFG",
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030420Z VRB01KT 9000 MIFG SCT038 12/12 Q1029 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 3800
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T03:53:13.678Z",
+  "obsTime": 1790999400,
+  "reportTime": "2026-10-03T04:00:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": 140,
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030350Z AUTO 14002KT 9999NDV NCD 13/12 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "CLR",
+  "clouds": []
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T03:52:13.506Z",
+  "obsTime": 1790999400,
+  "reportTime": "2026-10-03T04:00:00.000Z",
+  "temp": 11,
+  "dewp": 11,
+  "wdir": 180,
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1029,
+  "qcField": 16,
+  "wxString": "MIFG",
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030350Z 18001KT 9999 MIFG FEW039 11/11 Q1029 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 3900
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T03:23:17.521Z",
+  "obsTime": 1790997600,
+  "reportTime": "2026-10-03T03:20:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": 130,
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030320Z AUTO 13002KT 9999NDV NCD 13/12 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "CLR",
+  "clouds": []
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T03:26:08.055Z",
+  "obsTime": 1790997600,
+  "reportTime": "2026-10-03T03:20:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1029,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030320Z AUTO VRB01KT 9999 4200N FEW039 13/12 Q1029 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 3900
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T02:58:32.821Z",
+  "obsTime": 1790995800,
+  "reportTime": "2026-10-03T03:00:00.000Z",
+  "temp": 13,
+  "dewp": 13,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030250Z AUTO 00000KT 9999NDV FEW039 13/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 3900
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T02:52:12.555Z",
+  "obsTime": 1790995800,
+  "reportTime": "2026-10-03T03:00:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1029,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030250Z AUTO VRB01KT 9999 FEW040 13/12 Q1029 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 4000
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T02:28:18.792Z",
+  "obsTime": 1790994000,
+  "reportTime": "2026-10-03T02:20:00.000Z",
+  "temp": 14,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030220Z AUTO VRB02KT 9999NDV FEW038 14/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 3800
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T02:22:13.541Z",
+  "obsTime": 1790994000,
+  "reportTime": "2026-10-03T02:20:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": 310,
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1029,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030220Z AUTO 31003KT 9999 SCT041 13/12 Q1029 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 4100
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T01:53:15.021Z",
+  "obsTime": 1790992200,
+  "reportTime": "2026-10-03T02:00:00.000Z",
+  "temp": 14,
+  "dewp": 13,
+  "wdir": 130,
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030150Z AUTO 13002KT 9999NDV SCT038 14/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 3800
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T01:52:24.173Z",
+  "obsTime": 1790992200,
+  "reportTime": "2026-10-03T02:00:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": 290,
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1029,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030150Z AUTO 29003KT 9999 BKN042 13/12 Q1029 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 4200
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T01:22:24.154Z",
+  "obsTime": 1790990400,
+  "reportTime": "2026-10-03T01:20:00.000Z",
+  "temp": 14,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030120Z AUTO VRB01KT 9999 BKN042 14/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 4200
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T01:23:11.123Z",
+  "obsTime": 1790990400,
+  "reportTime": "2026-10-03T01:20:00.000Z",
+  "temp": 15,
+  "dewp": 13,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030120Z AUTO 00000KT 9999NDV BKN039 15/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 3900
+   }
+  ]
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-03T00:53:24.918Z",
+  "obsTime": 1790988600,
+  "reportTime": "2026-10-03T01:00:00.000Z",
+  "temp": 15,
+  "dewp": 13,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 030050Z AUTO 00000KT 9999NDV OVC041 15/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "OVC",
+  "clouds": [
+   {
+    "cover": "OVC",
+    "base": 4100
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T00:52:13.996Z",
+  "obsTime": 1790988600,
+  "reportTime": "2026-10-03T01:00:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030050Z AUTO VRB03KT 9999 BKN042 13/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 4200
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-03T00:22:16.577Z",
+  "obsTime": 1790986800,
+  "reportTime": "2026-10-03T00:20:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": 300,
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 030020Z AUTO 30003KT 9999 FEW044 13/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 4400
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-02T23:53:12.428Z",
+  "obsTime": 1790985000,
+  "reportTime": "2026-10-03T00:00:00.000Z",
+  "temp": 14,
+  "dewp": 13,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 022350Z AUTO 00000KT 9999NDV FEW043 14/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 4300
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-02T23:52:17.194Z",
+  "obsTime": 1790985000,
+  "reportTime": "2026-10-03T00:00:00.000Z",
+  "temp": 13,
+  "dewp": 12,
+  "wdir": 330,
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 022350Z AUTO 33003KT 9999 SCT044 13/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 4400
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-02T23:22:14.918Z",
+  "obsTime": 1790983200,
+  "reportTime": "2026-10-02T23:20:00.000Z",
+  "temp": 15,
+  "dewp": 13,
+  "wdir": 330,
+  "wspd": 4,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 022320Z AUTO 33004KT 9999 BKN043 15/13 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 4300
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-02T23:23:09.907Z",
+  "obsTime": 1790983200,
+  "reportTime": "2026-10-02T23:20:00.000Z",
+  "temp": 15,
+  "dewp": 13,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 022320Z AUTO 00000KT 9999NDV FEW044 15/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "FEW",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 4400
+   }
+  ]
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-02T22:53:15.083Z",
+  "obsTime": 1790981400,
+  "reportTime": "2026-10-02T23:00:00.000Z",
+  "temp": 16,
+  "dewp": 13,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 022250Z AUTO 00000KT 9999NDV SCT044 16/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "SCT",
+  "clouds": [
+   {
+    "cover": "SCT",
+    "base": 4400
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-02T22:52:14.555Z",
+  "obsTime": 1790981400,
+  "reportTime": "2026-10-02T23:00:00.000Z",
+  "temp": 16,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 1,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 022250Z AUTO VRB01KT 9999 FEW022 BKN043 16/13 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "FEW",
+    "base": 2200
+   },
+   {
+    "cover": "BKN",
+    "base": 4300
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-02T22:23:10.185Z",
+  "obsTime": 1790979600,
+  "reportTime": "2026-10-02T22:20:00.000Z",
+  "temp": 17,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 022220Z AUTO VRB02KT 9999NDV BKN045 17/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 4500
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-02T22:22:10.065Z",
+  "obsTime": 1790979600,
+  "reportTime": "2026-10-02T22:20:00.000Z",
+  "temp": 17,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 2,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 022220Z AUTO VRB02KT 9999 BKN043 17/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 4300
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-02T21:52:19.238Z",
+  "obsTime": 1790977800,
+  "reportTime": "2026-10-02T22:00:00.000Z",
+  "temp": 17,
+  "dewp": 13,
+  "wdir": 50,
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 18,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 022150Z AUTO 05003KT 9999 BKN044 17/13 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "BKN",
+  "clouds": [
+   {
+    "cover": "BKN",
+    "base": 4400
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-02T21:53:21.311Z",
+  "obsTime": 1790977800,
+  "reportTime": "2026-10-02T22:00:00.000Z",
+  "temp": 17,
+  "dewp": 13,
+  "wdir": 0,
+  "wspd": 0,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 022150Z AUTO 00000KT 9999NDV OVC046 17/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "OVC",
+  "clouds": [
+   {
+    "cover": "OVC",
+    "base": 4600
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-02T21:22:15.050Z",
+  "obsTime": 1790976000,
+  "reportTime": "2026-10-02T21:20:00.000Z",
+  "temp": 18,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 3,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 022120Z VRB03KT 9999 OVC043 18/13 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "OVC",
+  "clouds": [
+   {
+    "cover": "OVC",
+    "base": 4300
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-02T21:28:12.884Z",
+  "obsTime": 1790976000,
+  "reportTime": "2026-10-02T21:20:00.000Z",
+  "temp": 18,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 022120Z AUTO VRB02KT 9999NDV OVC046 18/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "OVC",
+  "clouds": [
+   {
+    "cover": "OVC",
+    "base": 4600
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-02T20:52:16.754Z",
+  "obsTime": 1790974200,
+  "reportTime": "2026-10-02T21:00:00.000Z",
+  "temp": 18,
+  "dewp": 12,
+  "wdir": "VRB",
+  "wspd": 2,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 022050Z VRB02KT 9999 OVC042 18/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "OVC",
+  "clouds": [
+   {
+    "cover": "OVC",
+    "base": 4200
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-02T20:53:21.156Z",
+  "obsTime": 1790974200,
+  "reportTime": "2026-10-02T21:00:00.000Z",
+  "temp": 18,
+  "dewp": 13,
+  "wdir": "VRB",
+  "wspd": 2,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 022050Z AUTO VRB02KT 9999NDV OVC047 18/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "OVC",
+  "clouds": [
+   {
+    "cover": "OVC",
+    "base": 4700
+   }
+  ]
+ },
+ {
+  "icaoId": "LSZH",
+  "receiptTime": "2026-10-02T20:22:22.360Z",
+  "obsTime": 1790972400,
+  "reportTime": "2026-10-02T20:20:00.000Z",
+  "temp": 18,
+  "dewp": 12,
+  "wdir": 270,
+  "wspd": 5,
+  "visib": "6+",
+  "altim": 1030,
+  "qcField": 16,
+  "metarType": "METAR",
+  "rawOb": "METAR LSZH 022020Z 27005KT 9999 OVC042 18/12 Q1030 NOSIG",
+  "lat": 47.48,
+  "lon": 8.536,
+  "elev": 424,
+  "name": "Zürich Intl Arpt, ZH, CH",
+  "cover": "OVC",
+  "clouds": [
+   {
+    "cover": "OVC",
+    "base": 4200
+   }
+  ],
+  "fltCat": "VFR"
+ },
+ {
+  "icaoId": "LSMD",
+  "receiptTime": "2026-10-02T20:23:22.426Z",
+  "obsTime": 1790972400,
+  "reportTime": "2026-10-02T20:20:00.000Z",
+  "temp": 18,
+  "dewp": 13,
+  "wdir": 110,
+  "wspd": 3,
+  "altim": 1030,
+  "qcField": 2,
+  "metarType": "METAR",
+  "rawOb": "METAR LSMD 022020Z AUTO 11003KT 080V140 9999NDV OVC047 18/13 Q1030 RMK",
+  "lat": 47.399,
+  "lon": 8.648,
+  "elev": 436,
+  "name": "Dübendorf Arpt, ZH, CH",
+  "cover": "OVC",
+  "clouds": [
+   {
+    "cover": "OVC",
+    "base": 4700
+   }
+  ]
+ }
+]

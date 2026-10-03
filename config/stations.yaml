@@ -40,13 +40,14 @@ bafu:
     - {station_id: "2176", name: "Sihl, Zürich (2176)"}
   # include_live: true            # additionally store instantaneous values of the last 12 h
 
-# City of Zurich UGZ, hourly means since 1992 (Heubeeribüel measures air quality only, not meteorology).
+# City of Zurich UGZ, hourly means since 1992; timestamp = start of the hour.
 ugz:
   canton: ZH
   stations:
     - {standort: "Zch_Stampfenbachstrasse", name: "Stampfenbachstrasse (UGZ)"}
     - {standort: "Zch_Schimmelstrasse", name: "Schimmelstrasse (UGZ)"}
     - {standort: "Zch_Rosengartenstrasse", name: "Rosengartenstrasse (UGZ)"}
+    - {standort: "Zch_Heubeeribüel", name: "Heubeeribüel (UGZ)"}         # T, Hr, p only
 
 # METAR (aviationweather.gov). Only a few days of archive; run updates regularly.
 metar:
