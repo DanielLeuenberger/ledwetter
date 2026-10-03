@@ -77,7 +77,7 @@ The command-line help, log messages and the web interface are in German.
 | FOEN/BAFU hydrology (data.bafu.admin.ch, GraphQL) | all parameters per station, usually W (water level), Q (discharge), WT (water temperature) | 10-min mean, interval start | per `coverageFrom` | verified with real responses; 10-min means lag about 1.5 hours |
 | City of Zurich UGZ (OGD) | T, Hr, p, RainDur, WD, WVs, WVv at Stampfenbach-, Schimmel- and Rosengartenstrasse (StrGlo at Stampfenbachstrasse); T, Hr, p at Heubeeribüel | hourly, timestamp = start of the hour | from 1992 | verified with real responses; time reference determined against MeteoSwiss radiation |
 | METAR (aviationweather.gov) | temperature, dew point, wind direction/speed/gust, visibility (km; 10 = 10 km or more), QNH, QFF | observation time | a few days | verified with real responses; temperature in whole degrees; no direction for calm or variable wind |
-| Greifensee private station (greifenseewetter.ch) | air/water temperature, humidity, pressure, wind speed/force/direction, gusts | instant (assumed) | hourly from weekly archive pages, finer for the current day | built from example pages, not yet confirmed live; disabled by default |
+| Greifensee private station (greifenseewetter.ch) | air/water temperature, humidity, pressure, wind speed/force/direction, gusts | instant (assumed) | hourly from weekly archive pages, finer for the current day | verified with real captures; disabled by default |
 
 MeteoSwiss publishes the m/s variants of its wind parameters (`fkl010z*`, `fk1towz0`, `fkltowz1`) in addition
 to the km/h ones; the m/s duplicates are skipped when the km/h column exists. Uetliberg (UEB) appears in the
@@ -118,8 +118,12 @@ degrees (22.5° steps); the daily page gives exact degrees. `history_start` in t
 unconfirmed guess at how far back the archive goes -- weeks before the station existed, or in the
 future, are skipped with a log message, so guessing too early just costs a few harmless 404s.
 
-The parser was built from the example pages the user supplied, not a recorded diagnostic run, so
-treat its first real run as a trial.
+Verified against real pages captured via `ledwetter diagnose` on 2026-10-03: the page is encoded
+`iso-8859-1` (not UTF-8 -- decoding it as UTF-8 would silently corrupt "ü", "ö" and the degree sign),
+and `pandas.read_html` needs `lxml` installed to parse it at all (it is a declared dependency, but an
+environment set up before this source existed may need `conda env update -f environment.yml --prune`
+or `pip install -e ".[dev]"` again). Still open: whether pressure is sea-level corrected, and how far
+back the archive actually goes.
 
 ## Cantons and station discovery
 

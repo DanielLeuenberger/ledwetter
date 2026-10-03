@@ -140,7 +140,9 @@ class GreifenseeWetter(Source):
     def _fetch_table(self, url: str, st: dict, label: str) -> Iterator[pd.DataFrame]:
         log.info("greifenseewetter %s: loading %s (%s)", st["id"], url.rsplit("/", 1)[-1], label)
         try:
-            html = self.http.get(url).content.decode("utf-8", errors="replace")
+            # the page declares charset=iso-8859-1 (confirmed from a real capture); utf-8 would
+            # silently mangle "ü", "ö" and the degree sign instead of raising
+            html = self.http.get(url).content.decode("iso-8859-1")
         except requests.HTTPError as e:
             log.info("greifenseewetter %s: %s not available (%s)", st["id"], url.rsplit("/", 1)[-1], e)
             return
@@ -149,10 +151,13 @@ class GreifenseeWetter(Source):
     def parse(self, html: str, st: dict) -> Iterator[pd.DataFrame]:
         try:
             tables = pd.read_html(io.StringIO(html))
-        except (ValueError, ImportError):
-            # ValueError: lxml found no <table> at all. ImportError: lxml found no table either and
-            # pandas' fallback parser (html5lib) isn't installed - same practical meaning here.
-            log.warning("greifenseewetter %s: no table found on the page", st["id"])
+        except (ValueError, ImportError) as e:
+            # ValueError: genuinely no <table> on the page. ImportError: pandas.read_html tried a
+            # second HTML parser backend (after the page turned up no table with the first one) and
+            # that one isn't installed either - this can fire even with lxml present, if html5lib is
+            # not, so the message below does not presume which package is actually missing.
+            log.warning("greifenseewetter %s: could not read a table from the page (%s). If this "
+                        "persists, ensure lxml and html5lib are both installed.", st["id"], e)
             return
         df = max(tables, key=len)  # the readings table is the largest one on the page
         if df.empty or not REQUIRED_COLUMNS <= set(df.columns):

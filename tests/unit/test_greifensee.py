@@ -100,9 +100,9 @@ class TestWeeklyArchive:
         assert df.empty and "not available" in caplog.text
 
     def test_unknown_compass_label_is_dropped_with_warning(self, caplog):
-        html = (read("week_2026_01.htm").decode()
+        html = (read("week_2026_01.htm").decode("iso-8859-1")
                .replace(">S-SW<", ">VAR<", 1))
-        http = http_with(**{r"/w2026_01\.htm$": html.encode()})
+        http = http_with(**{r"/w2026_01\.htm$": html.encode("iso-8859-1")})
         with caplog.at_level(logging.WARNING):
             df = fetch(source(http), Period(datetime(2025, 12, 29, tzinfo=UTC), datetime(2026, 1, 5, tzinfo=UTC)))
         assert "unknown compass label" in caplog.text
@@ -135,7 +135,7 @@ class TestRobustness:
         http = http_with(**{r"/aktuell\.htm$": b"<html><body>no data today</body></html>"})
         with caplog.at_level(logging.WARNING):
             assert fetch(source(http), Period(FIXED - timedelta(hours=2), FIXED)).empty
-        assert "no table found" in caplog.text
+        assert "could not read a table" in caplog.text
 
     def test_unexpected_layout_is_handled(self, caplog):
         http = http_with(**{r"/aktuell\.htm$": b"<table><tr><th>A</th><th>B</th></tr>"
@@ -156,3 +156,38 @@ class TestRobustness:
     def test_history_start_is_the_configured_guess(self):
         src = source(history_start="2021-06-01")
         assert src.history_start() == datetime(2021, 6, 1, tzinfo=UTC)
+
+
+class TestRealCapture:
+    """Against byte-for-byte real pages captured via 'ledwetter diagnose' on 2026-10-03
+    (tests/fixtures/greifensee/REAL_README.md)."""
+
+    def test_real_pages_parse_without_warnings(self, caplog):
+        http = http_with(**{r"/w2026_40\.htm$": read("real_week_2026_40.htm"),
+                            r"/aktuell\.htm$": read("real_aktuell.htm")})
+        clock_at_capture = lambda: datetime(2026, 10, 3, 15, 26, 18, tzinfo=UTC)
+        src = GreifenseeWetter(http, {"stations": [{"id": "greifensee", "name": "Greifensee"}]}, clock_at_capture)
+        with caplog.at_level(logging.WARNING):
+            df = fetch(src, Period(datetime(2026, 9, 27, tzinfo=UTC), clock_at_capture()))
+        assert caplog.text == ""
+        assert set(df["parameter"]) == set(GreifenseeWetter.CATALOG)
+        assert df["time_utc"].min() < pd.Timestamp("2026-09-28", tz="UTC")
+        assert df["time_utc"].max() == pd.Timestamp("2026-10-03 15:25:00", tz="UTC")
+
+    def test_real_page_declares_latin1_and_is_decoded_as_such(self):
+        # the captured bytes contain a non-UTF-8 '©' in the generator meta tag; decoding as UTF-8
+        # would silently corrupt it (and the degree signs / umlauts in the data) instead of erroring
+        raw = read("real_aktuell.htm")
+        with pytest.raises(UnicodeDecodeError):
+            raw.decode("utf-8")
+        assert "Werner Krenn" in raw.decode("iso-8859-1")
+
+    def test_missing_html_parser_gives_an_actionable_error(self, caplog, monkeypatch):
+        import pandas as pd
+        def fail(*a, **k):
+            raise ImportError("no parser")
+        monkeypatch.setattr(pd, "read_html", fail)
+        http = http_with(**{r"/aktuell\.htm$": read("real_aktuell.htm")})
+        with caplog.at_level(logging.WARNING):
+            df = fetch(source(http), Period(FIXED - timedelta(hours=2), FIXED))
+        assert df.empty and "ensure lxml and html5lib" in caplog.text
