@@ -228,14 +228,9 @@ metar:
     canton: ZH
 # Private weather station at the Greifensee (www.greifenseewetter.ch). Not an official network: no
 # uptime or quality guarantee, and the page could change without notice. Hourly history comes from
-# weekly archive pages; 'history_start' below is an unconfirmed guess at how far back they go -- see
-# the source's module docstring for this and other open questions. Disabled by default -- uncomment
-# to include it.
-# greifenseewetter:
-#   canton: ZH
-#   stations:
-#     - {id: greifensee, name: "Greifensee (private, greifenseewetter.ch)"}
-#   # history_start: "2020-01-01"
+# weekly archive pages; see the source's module docstring for open questions (how far back the
+# archive goes -- set history_start to override the default guess -- and whether pressure is
+# sea-level corrected). Verified against real captures on 2026-10-03.
 greifenseewetter:
   stations:
   - id: greifensee

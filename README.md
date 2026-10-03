@@ -63,8 +63,9 @@ More options: `-v` for diagnostic logging, `--config` for a different station fi
 Running `update` regularly (e.g. hourly via `cron` or `launchd`) keeps the database current; for METAR
 this is required because the source keeps only a few days of archive.
 
-Stations are configured in `config/stations.yaml`. Newly added stations receive their entire history
-on the next `update`.
+Stations are configured in `config/stations.yaml`, which ships with every station `ledwetter stations`
+found in canton Zurich (run that command again, or edit the file by hand, for other cantons or a
+narrower selection). Newly added stations receive their entire history on the next `update`.
 
 The command-line help, log messages and the web interface are in German.
 
@@ -106,10 +107,11 @@ Terms of use: MeteoSwiss data require the attribution "Source: MeteoSwiss".
 Unlike the other sources, this is a single hobbyist station (software: WsWin / "Wetterstation
 Bedien- und Auswertesoftware" by Werner Krenn), not an official, quality-assured network: no uptime
 guarantee, and the page layout could change at any time without notice. ledwetter drops physically
-implausible values but cannot otherwise validate its readings. It is disabled by default in
-`config/stations.yaml`; uncomment it to include it, then run `ledwetter diagnose` and check the log
-for the open questions named in `sources/greifenseewetter.py`'s module docstring (whether pressure is
-sea-level corrected, how far back the weekly archive goes, whether monthly/yearly pages also exist).
+implausible values but cannot otherwise validate its readings. It is enabled in `config/stations.yaml`
+(comment it out to exclude it); its real pages were captured and verified via `ledwetter diagnose` on
+2026-10-03, but the open questions named in `sources/greifenseewetter.py`'s module docstring remain
+(whether pressure is sea-level corrected, how far back the weekly archive goes, whether monthly/yearly
+pages also exist).
 
 History comes from weekly archive pages (`Wetter/<year>/w<year>_<ww>.htm`, one row per hour, filed
 under the ISO week-numbering year), with the current day's finer-grained readings layered on top from
