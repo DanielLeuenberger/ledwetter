@@ -77,6 +77,7 @@ The command-line help, log messages and the web interface are in German.
 | FOEN/BAFU hydrology (data.bafu.admin.ch, GraphQL) | all parameters per station, usually W (water level), Q (discharge), WT (water temperature) | 10-min mean, interval start | per `coverageFrom` | verified with real responses; 10-min means lag about 1.5 hours |
 | City of Zurich UGZ (OGD) | T, Hr, p, RainDur, WD, WVs, WVv at Stampfenbach-, Schimmel- and Rosengartenstrasse (StrGlo at Stampfenbachstrasse); T, Hr, p at Heubeeribüel | hourly, timestamp = start of the hour | from 1992 | verified with real responses; time reference determined against MeteoSwiss radiation |
 | METAR (aviationweather.gov) | temperature, dew point, wind direction/speed/gust, visibility (km; 10 = 10 km or more), QNH, QFF | observation time | a few days | verified with real responses; temperature in whole degrees; no direction for calm or variable wind |
+| Greifensee private station (greifenseewetter.ch) | air/water temperature, humidity, pressure, wind speed/force/direction, gusts | instant (assumed) | hourly from weekly archive pages, finer for the current day | built from example pages, not yet confirmed live; disabled by default |
 
 MeteoSwiss publishes the m/s variants of its wind parameters (`fkl010z*`, `fk1towz0`, `fkltowz1`) in addition
 to the km/h ones; the m/s duplicates are skipped when the km/h column exists. Uetliberg (UEB) appears in the
@@ -99,6 +100,26 @@ Deliberately **not** included: scraping tecson-data.ch (prohibited by its terms)
   as open data.
 
 Terms of use: MeteoSwiss data require the attribution "Source: MeteoSwiss".
+
+### A note on the Greifensee private station
+
+Unlike the other sources, this is a single hobbyist station (software: WsWin / "Wetterstation
+Bedien- und Auswertesoftware" by Werner Krenn), not an official, quality-assured network: no uptime
+guarantee, and the page layout could change at any time without notice. ledwetter drops physically
+implausible values but cannot otherwise validate its readings. It is disabled by default in
+`config/stations.yaml`; uncomment it to include it, then run `ledwetter diagnose` and check the log
+for the open questions named in `sources/greifenseewetter.py`'s module docstring (whether pressure is
+sea-level corrected, how far back the weekly archive goes, whether monthly/yearly pages also exist).
+
+History comes from weekly archive pages (`Wetter/<year>/w<year>_<ww>.htm`, one row per hour, filed
+under the ISO week-numbering year), with the current day's finer-grained readings layered on top from
+`Wetter/aktuell.htm`. The weekly pages give direction only as a 16-point compass label, converted to
+degrees (22.5° steps); the daily page gives exact degrees. `history_start` in the configuration is an
+unconfirmed guess at how far back the archive goes -- weeks before the station existed, or in the
+future, are skipped with a log message, so guessing too early just costs a few harmless 404s.
+
+The parser was built from the example pages the user supplied, not a recorded diagnostic run, so
+treat its first real run as a trial.
 
 ## Cantons and station discovery
 

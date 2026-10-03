@@ -5,12 +5,13 @@ from ..http import HttpClient
 from ..model import Clock, utcnow
 from .bafu import BafuHydro
 from .base import Source
+from .greifenseewetter import GreifenseeWetter
 from .meteoswiss import MeteoSwissSMN
 from .metar import MetarAWC
 from .ugz import UgzMeteo
 from .wapo import WaPo
 
-REGISTRY = {cls.name: cls for cls in (MeteoSwissSMN, WaPo, BafuHydro, UgzMeteo, MetarAWC)}
+REGISTRY = {cls.name: cls for cls in (MeteoSwissSMN, WaPo, BafuHydro, UgzMeteo, MetarAWC, GreifenseeWetter)}
 
 
 def build_sources(cfg: dict, http: HttpClient, names=None, clock: Clock = utcnow) -> list:
@@ -21,4 +22,5 @@ def build_sources(cfg: dict, http: HttpClient, names=None, clock: Clock = utcnow
     return [REGISTRY[n](http, cfg.get(n, {}), clock=clock) for n in names]
 
 
-__all__ = ["REGISTRY", "Source", "build_sources", "MeteoSwissSMN", "WaPo", "BafuHydro", "UgzMeteo", "MetarAWC"]
+__all__ = ["REGISTRY", "Source", "build_sources", "MeteoSwissSMN", "WaPo", "BafuHydro", "UgzMeteo", "MetarAWC",
+           "GreifenseeWetter"]

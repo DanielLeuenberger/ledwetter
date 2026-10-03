@@ -7,7 +7,7 @@
 # 'canton' on a section or a station is stored as station metadata (used by the canton filter of the web interface).
 
 settings:
-  user_agent: ledwetter/0.1 (private use)
+  user_agent: "ledwetter/0.1 (private use)"
   timeout_seconds: 120
   request_delay_seconds: 0.2      # pause between requests; spares the servers during backfills
   db_file: "data/ledwetter.db"
@@ -17,218 +17,60 @@ settings:
 meteoschweiz:
   canton: ZH
   stations:
-  - code: HOE
-    name: Hörnli
-    lat: 47.370864
-    lon: 8.941644
-    height_masl: 1133.0
-    canton: ZH
-  - code: KLO
-    name: Zürich / Kloten
-    lat: 47.479611
-    lon: 8.535961
-    height_masl: 426.0
-    canton: ZH
-  - code: LAE
-    name: Lägern
-    lat: 47.481933
-    lon: 8.397222
-    height_masl: 845.0
-    canton: ZH
-  - code: PFA
-    name: Pfäffikon, ZH
-    lat: 47.376817
-    lon: 8.754864
-    height_masl: 537.0
-    canton: ZH
-  - code: REH
-    name: Zürich / Affoltern
-    lat: 47.427694
-    lon: 8.517953
-    height_masl: 444.0
-    canton: ZH
-  - code: SMA
-    name: Zürich / Fluntern
-    lat: 47.381003
-    lon: 8.567194
-    height_masl: 604.0
-    canton: ZH
-  - code: UEB
-    name: Uetliberg
-    lat: 47.351364
-    lon: 8.490225
-    height_masl: 854.0
-    canton: ZH
-  - code: WAE
-    name: Wädenswil
-    lat: 47.220958
-    lon: 8.677706
-    height_masl: 485.0
-    canton: ZH
-  - code: UEB
-    name: Uetliberg
-    collection: ogd-smn-tower
-    lat: 47.351364
-    lon: 8.490225
-    height_masl: 854.0
-    canton: ZH
-  - code: AFI
-    name: Andelfingen
-    collection: ogd-smn-precip
-    lat: 47.604669
-    lon: 8.670289
-    height_masl: 360.0
-    canton: ZH
-  - code: BUE
-    name: Bülach
-    collection: ogd-smn-precip
-    lat: 47.519594
-    lon: 8.527731
-    height_masl: 403.0
-    canton: ZH
-  - code: DIT
-    name: Dietikon
-    collection: ogd-smn-precip
-    lat: 47.413558
-    lon: 8.404472
-    height_masl: 384.0
-    canton: ZH
-  - code: HIW
-    name: Hinwil
-    collection: ogd-smn-precip
-    lat: 47.309147
-    lon: 8.812358
-    height_masl: 539.0
-    canton: ZH
-  - code: KUE
-    name: Küsnacht, ZH
-    collection: ogd-smn-precip
-    lat: 47.310325
-    lon: 8.585281
-    height_masl: 413.0
-    canton: ZH
-  - code: LGA
-    name: Langnau am Albis
-    collection: ogd-smn-precip
-    lat: 47.287825
-    lon: 8.532708
-    height_masl: 535.0
-    canton: ZH
-  - code: OPF
-    name: Opfikon
-    collection: ogd-smn-precip
-    lat: 47.437633
-    lon: 8.560339
-    height_masl: 424.0
-    canton: ZH
-  - code: UST
-    name: Uster
-    collection: ogd-smn-precip
-    lat: 47.350736
-    lon: 8.692883
-    height_masl: 438.0
-    canton: ZH
-  - code: WAG
-    name: Waldegg
-    collection: ogd-smn-precip
-    lat: 47.362269
-    lon: 8.454789
-    height_masl: 545.0
-    canton: ZH
-  - code: WIN
-    name: Winterthur / Seen
-    collection: ogd-smn-precip
-    lat: 47.474672
-    lon: 8.763189
-    height_masl: 506.0
-    canton: ZH
-  - code: ZWK
-    name: Zwillikon
-    collection: ogd-smn-precip
-    lat: 47.290092
-    lon: 8.431958
-    height_masl: 461.0
-    canton: ZH
+    - {code: SMA, name: "Zürich / Fluntern"}
+    - {code: KLO, name: "Zürich / Kloten"}
+    - {code: REH, name: "Zürich / Affoltern"}
+    - {code: LAE, name: "Lägern"}
+    - {code: WAE, name: "Wädenswil"}
+    - {code: UEB, name: "Uetliberg (Turm)", collection: ogd-smn-tower}
+  # For all weather, tower and precipitation stations of the canton (20 entries) run
+  # 'python -m ledwetter stations --canton ZH' and use config/stations_zh.yaml.
+  # history_start: "2015-01-01"   # limit the backfill (default: oldest 10-minute file)
 
 # Zurich water police: history from the open-data CSV (since 2007), recent days from the Tecdottir API.
 wapo:
   canton: ZH
   stations:
-  - id: tiefenbrunnen
-    name: Tiefenbrunnen (WaPo)
-    canton: ZH
-  - id: mythenquai
-    name: Mythenquai (WaPo)
-    canton: ZH
+    - {id: tiefenbrunnen, name: "Tiefenbrunnen (WaPo)"}
+    - {id: mythenquai, name: "Mythenquai (WaPo)"}
 
 # FOEN (BAFU) hydrology (data.bafu.admin.ch, GraphQL). Water level, discharge, water temperature; 10-minute means.
 bafu:
   canton: ZH
-  stations:
-  - station_id: '2044'
-    name: Thur - Andelfingen (2044)
-    lat: 47.596578392770226
-    lon: 8.681847968534042
-    canton: ZH
-  - station_id: '2099'
-    name: Limmat - Zürich, Unterhard (2099)
-    lat: 47.390585718568495
-    lon: 8.525480417565218
-    canton: ZH
-  - station_id: '2132'
-    name: Töss - Neftenbach (2132)
-    lat: 47.51865286935144
-    lon: 8.653336151103352
-    canton: ZH
-  - station_id: '2176'
-    name: Sihl - Zürich, Sihlhölzli (2176)
-    lat: 47.36774168396804
-    lon: 8.526060651340458
-    canton: ZH
-  - station_id: '2209'
-    name: Zürichsee - Zürich (2209)
-    lat: 47.35458182585759
-    lon: 8.550611451971625
-    canton: ZH
-  - station_id: '2392'
-    name: Rhein (Oberwasser) - Rheinau (2392)
-    lat: 47.63914240108968
-    lon: 8.601878662069675
-    canton: ZH
-  - station_id: '2415'
-    name: Glatt - Rheinsfelden (2415)
-    lat: 47.57350846035258
-    lon: 8.475899227422083
-    canton: ZH
+  stations:   # all FOEN stations in canton ZH (names as on the data platform)
+    - {station_id: "2044", name: "Thur - Andelfingen (2044)"}
+    - {station_id: "2099", name: "Limmat - Zürich, Unterhard (2099)"}
+    - {station_id: "2132", name: "Töss - Neftenbach (2132)"}
+    - {station_id: "2176", name: "Sihl - Zürich, Sihlhölzli (2176)"}
+    - {station_id: "2209", name: "Zürichsee - Zürich (2209)"}
+    - {station_id: "2392", name: "Rhein (Oberwasser) - Rheinau (2392)"}
+    - {station_id: "2415", name: "Glatt - Rheinsfelden (2415)"}
+  # include_live: true            # additionally store instantaneous values of the last 12 h
+  # Greifensee (Niederuster) and other cantonal gauges belong to the AWEL network, which has no open API.
 
 # City of Zurich UGZ, hourly means since 1992; timestamp = start of the hour.
 ugz:
   canton: ZH
   stations:
-  - standort: Zch_Heubeeribüel
-    name: Heubeeribüel (UGZ)
-    canton: ZH
-  - standort: Zch_Rosengartenstrasse
-    name: Rosengartenstrasse (UGZ)
-    canton: ZH
-  - standort: Zch_Schimmelstrasse
-    name: Schimmelstrasse (UGZ)
-    canton: ZH
-  - standort: Zch_Stampfenbachstrasse
-    name: Stampfenbachstrasse (UGZ)
-    canton: ZH
+    - {standort: "Zch_Stampfenbachstrasse", name: "Stampfenbachstrasse (UGZ)"}
+    - {standort: "Zch_Schimmelstrasse", name: "Schimmelstrasse (UGZ)"}
+    - {standort: "Zch_Rosengartenstrasse", name: "Rosengartenstrasse (UGZ)"}
+    - {standort: "Zch_Heubeeribüel", name: "Heubeeribüel (UGZ)"}         # T, Hr, p only
 
 # METAR (aviationweather.gov). Only a few days of archive; run updates regularly.
 metar:
   canton: ZH
   stations:
-  - icao: LSMD
-    name: Dübendorf Arpt (METAR)
-    lat: 47.399
-    lon: 8.648
-    canton: ZH
-  - icao: LSZH
-    name: Zürich Intl Arpt (METAR)
-    lat: 47.48
-    lon: 8.536
-    canton: ZH
+    - {icao: LSZH, name: "Zürich Flughafen (METAR)"}
+    # - {icao: LSMD, name: "Dübendorf (METAR)"}   # military airfield, reports only during operating hours
+
+# Private weather station at the Greifensee (www.greifenseewetter.ch). Not an official network: no
+# uptime or quality guarantee, and the page could change without notice. Hourly history comes from
+# weekly archive pages; 'history_start' below is an unconfirmed guess at how far back they go -- see
+# the source's module docstring for this and other open questions. Disabled by default -- uncomment
+# to include it.
+# greifenseewetter:
+#   canton: ZH
+#   stations:
+#     - {id: greifensee, name: "Greifensee (private, greifenseewetter.ch)"}
+#   # history_start: "2020-01-01"
