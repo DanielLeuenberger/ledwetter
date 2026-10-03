@@ -1,29 +1,90 @@
-"""Canonical data format, time period and parsing helpers.
+"""Canonical data format, parameter catalogue, time period and parsing helpers.
 
 Every source yields pandas DataFrames with the columns COLUMNS (long format, one measurement per row).
+Values are stored in the unit delivered by the source; the parameter catalogue describes each
+parameter (description, unit, group, aggregation method and an optional cross-source quantity).
 """
 from __future__ import annotations
 
+import fnmatch
 import math
 import re
+from dataclasses import dataclass
 from datetime import datetime, timedelta, timezone
-from typing import Callable, Optional
+from typing import Callable, Iterable, Optional
 
 import pandas as pd
 
 LOCAL_TZ = "Europe/Zurich"
-UNITS = {"air_temperature": "°C", "water_temperature": "°C", "wind_speed": "km/h"}
-MEDIUM = {"air_temperature": "air", "water_temperature": "water", "wind_speed": "air"}
 TIME_REFS = ("interval_end", "interval_start", "instant", "unknown")
+AGGREGATIONS = ("mean", "sum", "max", "min", "dir")
 COLUMNS = ["time_utc", "time_ref", "interval_min", "source", "station_id", "station_name",
-           "medium", "parameter", "value", "unit"]
-WIND_FACTORS = {"m/s": 3.6, "ms-1": 3.6, "km/h": 1.0, "kmh": 1.0, "kt": 1.852, "kts": 1.852, "kn": 1.852}
+           "parameter", "value", "unit"]
 
 Clock = Callable[[], datetime]
 
 
 def utcnow() -> datetime:
     return datetime.now(timezone.utc)
+
+
+# ------------------------------------------------------------------ Parameter catalogue
+@dataclass(frozen=True)
+class ParameterInfo:
+    """Describes one parameter of one source.
+
+    agg:      how values are combined into hourly/daily values (mean, sum, max, min, dir = vector mean)
+    quantity: optional cross-source key (e.g. air_temperature) so that equivalent parameters of
+              different sources can be shown together
+    """
+    source: str
+    code: str
+    description: str
+    unit: str
+    group: str = ""
+    agg: str = "mean"
+    quantity: Optional[str] = None
+
+
+def guess_aggregation(code: str, description: str = "") -> str:
+    """Aggregation method from an (English or German) description, falling back to the code."""
+    if not description:
+        return _aggregation_from_code(code)
+    d = description.lower()
+    if "direction" in d or "richtung" in d:
+        return "dir"
+    if "total" in d or "summe" in d or "duration" in d or "dauer" in d:
+        return "sum"
+    if "maximum" in d or "gust" in d or "böe" in d or "index" in d:
+        return "max"
+    if "minimum" in d:
+        return "min"
+    return "mean"
+
+
+def _aggregation_from_code(code: str) -> str:
+    """Rules for MeteoSwiss-style codes (e.g. rre150z0) when no description is available."""
+    c = code.lower()
+    if c.startswith(("rre", "rka", "sre", "erefao")) or c in ("raindur", "precipitation"):
+        return "sum"
+    if c.startswith(("dkl", "dv")) or "direction" in c or c in ("wd", "wdir"):
+        return "dir"
+    if re.fullmatch(r"[a-z0-9]{6}z[13]", c) or "gust" in c or c == "wgst":
+        return "max"
+    return "mean"
+
+
+class ParameterFilter:
+    """include/exclude lists with shell-style patterns, e.g. {include: ["tre*"], exclude: ["fkl*"]}."""
+
+    def __init__(self, include: Optional[Iterable[str]] = None, exclude: Optional[Iterable[str]] = None):
+        self.include = list(include) if include else None
+        self.exclude = list(exclude or [])
+
+    def __call__(self, code: str) -> bool:
+        if self.include is not None and not any(fnmatch.fnmatchcase(code, p) for p in self.include):
+            return False
+        return not any(fnmatch.fnmatchcase(code, p) for p in self.exclude)
 
 
 # ------------------------------------------------------------------ Frames
@@ -35,44 +96,37 @@ def empty_frame() -> pd.DataFrame:
     return df
 
 
-def make_frame(times, *, source: str, station_id: str, station_name: str, time_ref: str,
-               interval_min: Optional[int], **params) -> pd.DataFrame:
-    """Build a canonical frame from a time axis and parameter series of equal length.
-    Missing values are dropped; parameters passed as None are ignored."""
+def make_frame(times, values, *, source: str, station_id: str, station_name: str, parameter: str,
+               unit: str, time_ref: str, interval_min: Optional[int]) -> pd.DataFrame:
+    """Build a canonical frame for one parameter from aligned times and values. Missing values are dropped."""
     if time_ref not in TIME_REFS:
-        raise ValueError(f"Unbekannter time_ref: {time_ref}")
+        raise ValueError(f"Unknown time_ref: {time_ref}")
     t = pd.Series(pd.to_datetime(pd.Series(times).reset_index(drop=True), utc=True))
-    parts = []
-    for param, values in params.items():
-        if values is None:
-            continue
-        if param not in UNITS:
-            raise ValueError(f"Unbekannter Parameter: {param}")
-        v = pd.to_numeric(pd.Series(values).reset_index(drop=True), errors="coerce").astype("float64")
-        df = pd.DataFrame({"time_utc": t, "value": v}).dropna()
-        if df.empty:
-            continue
-        df["time_ref"] = time_ref
-        df["interval_min"] = pd.array([interval_min] * len(df), dtype="Int64")
-        df["source"], df["station_id"], df["station_name"] = source, str(station_id), station_name
-        df["medium"], df["parameter"], df["unit"] = MEDIUM[param], param, UNITS[param]
-        parts.append(df[COLUMNS])
-    return pd.concat(parts, ignore_index=True) if parts else empty_frame()
+    v = pd.to_numeric(pd.Series(values).reset_index(drop=True), errors="coerce").astype("float64")
+    df = pd.DataFrame({"time_utc": t, "value": v}).dropna()
+    if df.empty:
+        return empty_frame()
+    df["time_ref"] = time_ref
+    df["interval_min"] = pd.array([interval_min] * len(df), dtype="Int64")
+    df["source"], df["station_id"], df["station_name"] = source, str(station_id), station_name
+    df["parameter"], df["unit"] = parameter, unit or ""
+    return df[COLUMNS].reset_index(drop=True)
+
+
+def concat(frames: Iterable[pd.DataFrame]) -> pd.DataFrame:
+    frames = [f for f in frames if f is not None and not f.empty]
+    return pd.concat(frames, ignore_index=True) if frames else empty_frame()
 
 
 # ------------------------------------------------------------------ Units and times
-def wind_factor(unit: Optional[str]) -> float:
-    u = (unit or "").strip().lower().replace(" ", "")
-    if u not in WIND_FACTORS:
-        raise ValueError(f"Unbekannte Windeinheit: {unit!r}")
-    return WIND_FACTORS[u]
+WIND_FACTORS_KMH = {"m/s": 3.6, "km/h": 1.0, "kt": 1.852, "kn": 1.852}
 
 
 def to_float(v) -> Optional[float]:
     if v is None:
         return None
     try:
-        f = float(str(v).strip().replace(",", "."))
+        f = float(str(v).strip().replace(",", ".").rstrip("+"))
     except ValueError:
         return None
     return None if math.isnan(f) else f
@@ -120,9 +174,9 @@ class Period:
 
     def __init__(self, start: datetime, end: datetime):
         if start.tzinfo is None or end.tzinfo is None:
-            raise ValueError("Period braucht zeitzonenbehaftete Zeiten.")
+            raise ValueError("Period requires timezone-aware datetimes.")
         if start >= end:
-            raise ValueError("Start muss vor Ende liegen.")
+            raise ValueError("Start must be before end.")
         self.start, self.end = start.astimezone(timezone.utc), end.astimezone(timezone.utc)
 
     @classmethod

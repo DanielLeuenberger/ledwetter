@@ -1,0 +1,7 @@
+parameter_shortname;parameter_description_de;parameter_description_fr;parameter_description_it;parameter_description_en;parameter_group_de;parameter_group_fr;parameter_group_it;parameter_group_en;parameter_granularity;parameter_decimals;parameter_datatype;parameter_unit
+ta1tows0;"Lufttemperatur Turm; Momentanwert";;;"Air temperature tower; current value";Temperatur;;;;T;1;Float;°C
+fu3towz0;"Windgeschwindigkeit Turm; Zehnminutenmittel in km/h";;;"Wind speed tower; ten minutes mean in km/h";Wind;;;;T;1;Float;km/h
+fk1towz0;"Windgeschwindigkeit Turm; Zehnminutenmittel in m/s";;;"Wind speed tower; ten minutes mean in m/s";Wind;;;;T;1;Float;m/s
+dv1towz0;"Windrichtung vektoriell Turm; Zehnminutenmittel";;;"Wind direction vectorial tower; ten minutes mean";Wind;;;;T;1;Float;°
+sre000z0;"Sonnenscheindauer; Zehnminutensumme";;;"Sunshine duration; ten minutes total";Sonne;;;;T;1;Float;min
+gre000z0;"Globalstrahlung; Zehnminutenmittel";;;"Global radiation; ten minutes mean";Strahlung;;;;T;1;Float;W/m²

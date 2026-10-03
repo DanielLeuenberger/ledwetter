@@ -1,6 +1,6 @@
 # ledwetter
 
-Collect measurements from public weather and water stations around Zurich, store them in a local
+Collect measurements from public weather and water stations in Switzerland (developed for the canton of Zurich), store them in a local
 database and explore them in the browser. All timestamps are **measurement times reported by the
 sources, in UTC**, never retrieval times.
 
@@ -11,6 +11,11 @@ sources, in UTC**, never retrieval times.
 - **`serve`** starts a web interface: select stations, parameters, time range and aggregation
   (raw data, hourly or daily values) and plot them.
 - **`export`** writes any period from all sources directly to a homogeneous CSV file (no database needed).
+- **`stations`** lists all stations of the sources within one or more cantons (default: Zurich) and writes
+  them as a configuration file. National sources work for every canton; regional networks only for theirs.
+
+All parameters a source delivers are stored, in their original unit, together with a parameter
+catalogue (description, unit, group, aggregation method).
 
 ## Installation
 
@@ -48,6 +53,9 @@ conda install -c local ledwetter
 python -m ledwetter update                 # build or update the database (data/ledwetter.db)
 python -m ledwetter serve                  # web interface at http://127.0.0.1:8000
 python -m ledwetter export --start 2026-10-01 --end 2026-10-02 --out oct.csv
+python -m ledwetter stations --canton ZH            # all stations in the canton -> config/stations_zh.yaml
+python -m ledwetter stations --canton ZH,AG,SH      # several cantons -> config/stations_zh_ag_sh.yaml
+python -m ledwetter --config config/stations_zh.yaml update   # build the database for them
 ```
 
 More options: `-v` for diagnostic logging, `--config` for a different station file,
@@ -62,18 +70,95 @@ The command-line help, log messages and the web interface are in German.
 
 ## Sources
 
-| Source | Stations (example) | Parameters | Time reference | History | Status |
-|---|---|---|---|---|---|
-| MeteoSwiss SwissMetNet (OGD, data.geo.admin.ch) | SMA, KLO, REH, LAE, UEB (tower) | air, wind | 10-min mean, interval end | from 2000 (10-min files) | format verified against a real file excerpt; tower parameter names derived |
-| Zurich water police (OGD CSV + Tecdottir API) | Tiefenbrunnen, Mythenquai | air, water, wind | 10 min (water: instantaneous) | from 2007 | OGD columns verified; Tecdottir JSON not checked live |
-| FOEN/BAFU hydrology (data.bafu.admin.ch, GraphQL) | 2099, 2243, 2176 | water temperature | 10-min mean, interval start | per `coverageFrom` | API documentation verified; check station selection |
-| City of Zurich UGZ (OGD) | Stampfenbach-, Schimmel-, Rosengartenstrasse, Heubeeribüel | air, wind | hourly mean, reference unknown | from 1992 | format verified; interval reference open |
-| METAR (aviationweather.gov) | LSZH | air, wind | observation time | a few days | verified; temperature in whole degrees |
+| Source | Parameters (all are extracted) | Time reference | History | Status |
+|---|---|---|---|---|
+| MeteoSwiss SwissMetNet (OGD, data.geo.admin.ch): weather, tower and precipitation networks | every column of the 10-minute files, e.g. temperature 2 m / 5 cm / surface, dew point, humidity, vapour pressure, QFE/QFF/QNH, 850/700 hPa geopotential, precipitation, sunshine, global/diffuse/long-wave/reflected radiation, wind direction/speed/gusts, snow depth, soil temperature, foehn index; descriptions and units from the official `*_meta_parameters.csv` | codes `…s0` instantaneous, `…z0/z1/z3` 10-min interval end | from 2000 (10-min files) | file format and parameter list verified |
+| Zurich water police (OGD CSV + Tecdottir API) | air and water temperature, wind speed/gust/force/direction, windchill, QFE, precipitation, dew point, global radiation, humidity, lake level (radiation, precipitation and level at Mythenquai only) | `*_10min` interval end, others unknown | from 2007 | OGD columns verified; Tecdottir JSON not checked live |
+| FOEN/BAFU hydrology (data.bafu.admin.ch, GraphQL) | all parameters per station, usually W (water level), Q (discharge), WT (water temperature) | 10-min mean, interval start | per `coverageFrom` | API documentation verified |
+| City of Zurich UGZ (OGD) | T, Hr, p, RainDur, StrGlo, WD, WVs, WVv at Stampfenbach-, Schimmel- and Rosengartenstrasse | hourly, reference unknown | from 1992 | parameters and stations verified; interval reference open |
+| METAR (aviationweather.gov) | temperature, dew point, wind direction/speed/gust, visibility, QNH, QFF | observation time | a few days | schema verified; temperature in whole degrees |
+
+MeteoSwiss publishes the m/s variants of its wind parameters (`fkl010z*`, `fk1tow*`) in addition to the
+km/h ones; the m/s duplicates are skipped when the km/h column exists.
 
 Deliberately **not** included: scraping tecson-data.ch (prohibited by its terms), NABEL Zürich-Kaserne
-(no open meteorological API), the AWEL LoRa urban-climate network (monthly files only, no real-time operation).
+(no open meteorological API).
+
+### Further sources in canton Zurich (not yet integrated)
+
+- **AWEL hydrometric network** (canton): over 60 stations for water level, discharge, water temperature
+  and precipitation. Station metadata are open data (CSV/WFS); measurement series are published as
+  yearbooks or on request, without a documented API.
+- **AWEL LoRa urban-climate network** (canton): about 40–50 low-cost sensors for air temperature and
+  humidity, monthly CSV files on opendata.swiss. Suited for backfills; the file format still needs checking.
+- **Winterthur urban-climate measurements** (canton statistics office): yearly CSV files in UTC with a
+  station table.
+- **City of Zurich urban-climate network (meteoblue)**: station locations and cleaned temperature series
+  as open data.
 
 Terms of use: MeteoSwiss data require the attribution "Source: MeteoSwiss".
+
+## Cantons and station discovery
+
+`python -m ledwetter stations --canton ZH` builds a configuration with every station of the integrated sources
+in a canton; several cantons are given comma-separated (`--canton ZH,AG`). One database can hold stations of
+any number of cantons; the web interface then offers a canton filter.
+
+| Source | Coverage | How stations are found |
+|---|---|---|
+| MeteoSwiss (weather, tower, precipitation networks) | Switzerland | official station lists with a canton column |
+| FOEN/BAFU hydrology | Switzerland | station list of the data platform; canton from the coordinates via the federal geo service (api3.geo.admin.ch, swisstopo cantonal boundaries) |
+| METAR | Switzerland | station info service of aviationweather.gov (METAR sites in Switzerland); canton from the coordinates |
+| Zurich water police | ZH | fixed list |
+| City of Zurich UGZ | ZH | locations in the current yearly file |
+
+Each station entry carries `canton` and, where known, `lat`, `lon` and `height_masl`; these are stored as
+station metadata. National station lists are downloaded once even for several cantons, and point lookups
+are skipped for stations outside the canton's bounding box.
+
+### Adding a regional network
+
+A network of another canton or city is a new subclass of `sources.base.Source`:
+
+```python
+class BernCityNetwork(Source):
+    name = "bern_city"          # section name in the configuration
+    key = "id"                  # station key in the configuration
+    regions = ("BE",)           # cantons it covers (None = all of Switzerland)
+    CATALOG = {"temp": ("Lufttemperatur", "°C", "Temperatur", "mean", "air_temperature")}
+
+    @classmethod
+    def discover(cls, ctx, canton):          # station entries for 'ledwetter stations'
+        return [{"id": "b1", "name": "Bärenplatz"}]
+
+    def fetch_station(self, st, period):     # yield canonical frames via self.frame(...)
+        ...
+```
+
+Register it in `sources.REGISTRY`; station discovery, the database, the CSV export and the web interface
+pick it up without further changes. Setting `quantity` in the catalogue lets its parameters appear together
+with the equivalent parameters of other sources.
+
+## Diagnostics
+
+To check that every source is imported correctly on your machine:
+
+```bash
+python -m ledwetter diagnose                  # writes diagnose/ and diagnose.zip
+python -m ledwetter diagnose --since "2026-10-03 00:00" --canton ZH,AG
+```
+
+This discovers the stations of the canton(s), runs a short update (default: since midnight local time) into a
+separate database `diagnose/diagnose.db` and writes:
+
+- `index.jsonl` plus one file per response of every source (CSV files above 2 MB are cut at a line boundary),
+- `summary.csv` with every stored series: count, time range, value range, unit, aggregation method,
+- `diagnose.log`, `stations_zh.yaml` and `run_info.json` (command, versions, configuration).
+
+The general options `--record DIR` and `--replay DIR` work with every command. `--replay` answers all requests
+from a recording without network access and sets the clock to the time of the recording, so a run can be
+reproduced exactly elsewhere, for example `python -m ledwetter --replay diagnose diagnose --out check`.
+Recordings contain only public data and no credentials.
 
 ## Database
 
@@ -84,26 +169,39 @@ millions of values and per-series time aggregation.
 Alternatives: DuckDB or Parquet would be faster for large analyses but add a dependency and suit
 frequent small updates less well. CSV is unsuitable for a growing database (no upserts, no indexes).
 
-Schema (compact, normalised):
+Schema (compact, normalised, version 3):
 
 ```
-stations(id, source, station_id, name)
-series(id, station, parameter, unit, medium, time_ref, interval_min)   -- one time series
+stations(id, source, station_id, name, canton, lat, lon, height_masl)
+parameters(source, code, description, unit, grp, agg, quantity)   -- parameter catalogue
+series(id, station, parameter, unit, time_ref, interval_min)      -- one time series
 measurements(series, t, value)   PRIMARY KEY (series, t), WITHOUT ROWID; t = Unix seconds UTC
 ```
 
-Expected size with the default configuration: roughly 25–30 million values, about 0.5–1 GB.
+Values are stored in the unit delivered by the source. `quantity` links equivalent parameters of different
+sources (e.g. `tre200s0`, `air_temperature`, `T` and `temp` are all `air_temperature`). A version 2 database
+is upgraded automatically (station metadata columns are added); a version 1 database is rejected, delete it
+and run `update` again.
+
+Expected size with the default configuration and all parameters: a few hundred million values, several GB.
+Restrict parameters per source with `parameters.include` / `parameters.exclude` if needed.
 The initial build takes a while depending on the connection (large MeteoSwiss decade files,
 several hundred BAFU queries); `request_delay_seconds` in the configuration spares the servers.
 
 ## Aggregation
 
-- Hourly and daily values are computed from the stored values: mean, minimum, maximum, count.
+- Hourly and daily values are computed with each parameter's method from the catalogue:
+  **mean** (with minimum/maximum band), **sum** (precipitation, sunshine and rain duration),
+  **max** (gusts, foehn index), **min**, or **dir** (vector mean for wind directions, so 350° and 10° give 0°).
+- The method comes from the official description (MeteoSwiss) or the source catalogue; without a description
+  it is derived from the code (e.g. `rre…` sum, `dkl…` direction, `…z1` maximum).
 - Bins are in **UTC** and labelled with their **start** (hourly value 14:00 = 14:00–15:00 UTC).
 - Values whose time reference is the *interval end* count towards the interval in which they were
   measured (the 10-minute value at 15:00 belongs to the hour 14:00–15:00).
 - Bins with insufficient coverage (default 75 % of the expected values) are left empty; for
   instantaneous values the expected count is unknown, so no filter is applied.
+- The web interface shows wind speeds in km/h for comparison across sources; all other values are shown
+  in their original unit.
 - For climatological analyses MeteoSwiss recommends its officially aggregated hourly and daily values
   over self-computed ones; this database is meant for exploration.
 
@@ -112,10 +210,10 @@ several hundred BAFU queries); `request_delay_seconds` in the configuration spar
 Long format, one row per measurement:
 
 ```
-time_utc, time_ref, interval_min, source, station_id, station_name, medium, parameter, value, unit
+time_utc, time_ref, interval_min, source, station_id, station_name, parameter, value, unit, quantity, description
 ```
 
-`time_ref` is `interval_end`, `interval_start`, `instant` or `unknown`; units are always °C and km/h.
+`time_ref` is `interval_end`, `interval_start`, `instant` or `unknown`; `unit` is the original unit of the source.
 
 ## Tests
 
@@ -126,8 +224,9 @@ pytest -m regression        # regression tests against tests/regression/expected
 UPDATE_GOLDEN=1 pytest -m regression   # rewrite the references after an intentional change
 ```
 
-- **Unit tests** cover time and unit conversion (including DST transitions), file selection, pagination,
-  BAFU query windows, per-station error isolation, storage, aggregation and the web API.
+- **Unit tests** cover time conversion (including DST transitions), file selection, pagination, BAFU query
+  windows, parameter extraction and catalogues, per-station error isolation, storage, all aggregation methods,
+  station discovery and the web API.
 - **Regression tests** replay recorded responses of all sources (`tests/fixtures`) and compare the CSV
   export and the aggregates with stored references. A real MeteoSwiss file excerpt additionally guards
   the file format.
@@ -140,9 +239,12 @@ UPDATE_GOLDEN=1 pytest -m regression   # rewrite the references after an intenti
 ```
 src/ledwetter/
   model.py        canonical data format, time period, time and unit conversion
-  http.py         HTTP client with retries
+  http.py         HTTP client with retries, recording and replay
+  diagnose.py     one-command diagnostics run
   sources/        one class per source (base class Source)
-  storage.py      SQLite storage and aggregation
+  storage.py      SQLite storage, parameter catalogue and aggregation
+  geo.py          cantons and canton lookups via the federal geo service
+  discover.py     station discovery for one or more cantons
   ingest.py       building and updating the database
   export.py       CSV export
   server.py       local web server with JSON API
@@ -155,7 +257,6 @@ tests/unit, tests/regression, tests/fixtures
 
 ## Open points
 
-Only a real run (`python -m ledwetter update -v`) will settle: the tower parameter names for UEB,
-the exact JSON of the Tecdottir API, the interval reference of the UGZ data and which BAFU stations
-actually measure water temperature. In these cases the log names the columns, locations or missing
-stations that were actually found.
+Only a real run (`python -m ledwetter update -v`) will settle: the exact JSON of the Tecdottir API,
+the interval reference of the UGZ data, the attribute names of the geo services (identify, find) and of the
+METAR station info service used for station discovery, and which parameters each BAFU station delivers. The log names missing locations, stations and metadata.

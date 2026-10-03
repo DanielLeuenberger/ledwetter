@@ -3,7 +3,8 @@ from datetime import datetime, timezone
 import pandas as pd
 import pytest
 
-from ledwetter.model import COLUMNS, Period, make_frame, parse_time, parse_time_series, to_float, wind_factor
+from ledwetter.model import (COLUMNS, ParameterFilter, Period, guess_aggregation, make_frame, parse_time,
+                             parse_time_series, to_float)
 
 UTC = timezone.utc
 
@@ -35,17 +36,31 @@ class TestParseTime:
         assert list(out) == [pd.Timestamp("2026-10-03 05:00", tz="UTC")] * 2
 
 
-class TestUnits:
-    @pytest.mark.parametrize("unit,factor", [("m/s", 3.6), ("km/h", 1.0), ("kt", 1.852), (" M/S ", 3.6)])
-    def test_wind_factor(self, unit, factor):
-        assert wind_factor(unit) == factor
+class TestValuesAndParameters:
+    def test_to_float(self):
+        assert to_float("3,5") == 3.5 and to_float("-") is None and to_float("10+") == 10.0
 
-    def test_unknown_unit_raises(self):
-        with pytest.raises(ValueError):
-            wind_factor("mph")
+    @pytest.mark.parametrize("code,desc,agg", [
+        ("rre150z0", "Precipitation; ten minutes total", "sum"),
+        ("fu3010z1", "Gust peak (one second); maximum in km/h", "max"),
+        ("dkl010z0", "Wind direction; ten minutes mean", "dir"),
+        ("tre200s0", "Air temperature 2 m above ground; current value", "mean"),
+        ("RainDur", "Niederschlagsdauer", "sum"),
+        ("wcc006s0", "Foehn index", "max"),
+    ])
+    def test_guess_aggregation(self, code, desc, agg):
+        assert guess_aggregation(code, desc) == agg
 
-    def test_to_float_comma(self):
-        assert to_float("3,5") == 3.5 and to_float("-") is None
+    @pytest.mark.parametrize("code,agg", [("rre150z0", "sum"), ("sre000z0", "sum"), ("dkl010z0", "dir"),
+                                          ("dv1towz0", "dir"), ("fu3010z1", "max"), ("fu3towz3", "max"),
+                                          ("tre200s0", "mean"), ("WD", "dir"), ("RainDur", "sum")])
+    def test_aggregation_from_code_only(self, code, agg):
+        assert guess_aggregation(code) == agg
+
+    def test_parameter_filter(self):
+        f = ParameterFilter(include=["tre*", "fu3*"], exclude=["fu3010z3"])
+        assert f("tre200s0") and f("fu3010z0") and not f("fu3010z3") and not f("ure200s0")
+        assert ParameterFilter()("anything")
 
 
 class TestPeriod:
@@ -72,16 +87,11 @@ class TestPeriod:
 class TestMakeFrame:
     def test_drops_missing_and_sets_metadata(self):
         t = pd.to_datetime(["2026-10-03T05:00Z", "2026-10-03T05:10Z"], utc=True)
-        df = make_frame(t, source="x", station_id="A", station_name="Alpha", time_ref="interval_end",
-                        interval_min=10, air_temperature=[1.0, None], wind_speed=["5", "6"])
-        assert list(df.columns) == COLUMNS
-        assert len(df) == 3
-        assert set(df["unit"]) == {"°C", "km/h"}
-        assert (df["medium"] == "air").all()
+        df = make_frame(t, [1.0, None], source="x", station_id="A", station_name="Alpha", parameter="p1",
+                        unit="°C", time_ref="interval_end", interval_min=10)
+        assert list(df.columns) == COLUMNS and len(df) == 1 and df["unit"].iloc[0] == "°C"
 
-    def test_rejects_unknown_parameter_and_time_ref(self):
+    def test_rejects_unknown_time_ref(self):
         with pytest.raises(ValueError):
-            make_frame([], source="x", station_id="A", station_name="A", time_ref="end", interval_min=10)
-        with pytest.raises(ValueError):
-            make_frame(["2026-01-01T00:00Z"], source="x", station_id="A", station_name="A",
-                       time_ref="instant", interval_min=0, humidity=[50])
+            make_frame([], [], source="x", station_id="A", station_name="A", parameter="p", unit="",
+                       time_ref="end", interval_min=10)

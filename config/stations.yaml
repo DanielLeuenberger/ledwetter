@@ -1,5 +1,10 @@
 # ledwetter – station configuration
 # All timestamps are measurement times reported by the sources (UTC). Records without one are discarded.
+# All parameters a source delivers are stored in their original unit. Each source section may restrict
+# them with shell-style patterns, e.g.
+#   parameters: {include: ["tre*", "rre150z0"], exclude: ["tso*"]}
+# 'python -m ledwetter stations --canton ZH' (or ZH,AG,...) writes a complete list of all stations in the canton(s).
+# 'canton' on a section or a station is stored as station metadata (used by the canton filter of the web interface).
 
 settings:
   user_agent: "ledwetter/0.1 (private use)"
@@ -7,8 +12,10 @@ settings:
   request_delay_seconds: 0.2      # pause between requests; spares the servers during backfills
   db_file: "data/ledwetter.db"
 
-# MeteoSwiss SwissMetNet (open government data). 10-minute means, timestamp = interval end.
+# MeteoSwiss SwissMetNet (open government data). 10-minute values, timestamp = interval end.
+# collection: ogd-smn (default), ogd-smn-tower or ogd-smn-precip (precipitation-only stations).
 meteoschweiz:
+  canton: ZH
   stations:
     - {code: SMA, name: "Zürich / Fluntern"}
     - {code: KLO, name: "Zürich / Kloten"}
@@ -19,27 +26,31 @@ meteoschweiz:
 
 # Zurich water police: history from the open-data CSV (since 2007), recent days from the Tecdottir API.
 wapo:
+  canton: ZH
   stations:
     - {id: tiefenbrunnen, name: "Tiefenbrunnen (WaPo)"}
     - {id: mythenquai, name: "Mythenquai (WaPo)"}
 
-# FOEN (BAFU) hydrology (data.bafu.admin.ch, GraphQL). Water temperature, 10-minute means.
+# FOEN (BAFU) hydrology (data.bafu.admin.ch, GraphQL). Water level, discharge, water temperature; 10-minute means.
 bafu:
+  canton: ZH
   stations:
     - {station_id: "2099", name: "Limmat, Zürich (2099)"}
     - {station_id: "2243", name: "Limmat, Unterhard (2243)"}
     - {station_id: "2176", name: "Sihl, Zürich (2176)"}
   # include_live: true            # additionally store instantaneous values of the last 12 h
 
-# City of Zurich UGZ, hourly means since 1992.
+# City of Zurich UGZ, hourly means since 1992 (Heubeeribüel measures air quality only, not meteorology).
 ugz:
+  canton: ZH
   stations:
     - {standort: "Zch_Stampfenbachstrasse", name: "Stampfenbachstrasse (UGZ)"}
     - {standort: "Zch_Schimmelstrasse", name: "Schimmelstrasse (UGZ)"}
     - {standort: "Zch_Rosengartenstrasse", name: "Rosengartenstrasse (UGZ)"}
-    - {standort: "Zch_Heubeeribüel", name: "Heubeeribüel (UGZ)"}
 
 # METAR (aviationweather.gov). Only a few days of archive; run updates regularly.
 metar:
+  canton: ZH
   stations:
     - {icao: LSZH, name: "Zürich Flughafen (METAR)"}
+    # - {icao: LSMD, name: "Dübendorf (METAR)"}   # military airfield, reports only during operating hours

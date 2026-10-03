@@ -9,3 +9,5 @@ data/
 *.db-shm
 *.csv
 !tests/**/*.csv
+diagnose/
+diagnose.zip

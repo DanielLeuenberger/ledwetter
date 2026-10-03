@@ -1,0 +1,7 @@
+station_abbr;station_name;station_canton;station_height_masl;station_coordinates_wgs84_lat;station_coordinates_wgs84_lon
+ABO;Adelboden;BE;1321.0;46.491703;7.560703
+HOE;Hörnli;ZH;1133.0;47.370864;8.941644
+KLO;Zürich / Kloten;ZH;426.0;47.479611;8.535961
+LAE;Lägern;ZH;845.0;47.481933;8.397222
+PFA;Pfäffikon, ZH;ZH;537.0;47.376817;8.754864
+REH;Zürich / Affoltern;ZH;444.0;47.427694;8.517953

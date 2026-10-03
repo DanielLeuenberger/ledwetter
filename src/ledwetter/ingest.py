@@ -13,7 +13,8 @@ log = logging.getLogger(__name__)
 
 class Ingestor:
     """Loads data for each station from its latest stored measurement time (minus an overlap),
-    or from the start of the available history if the station is not yet in the database."""
+    or from the start of the available history if the station is not yet in the database.
+    The parameter catalogue of each source is stored alongside the measurements."""
 
     def __init__(self, store: MeasurementStore, sources: list, clock: Clock = utcnow,
                  overlap: timedelta = timedelta(days=2)):
@@ -38,18 +39,22 @@ class Ingestor:
                 try:
                     start = self.start_for(sub, stations, since)
                 except Exception as e:
-                    log.warning("%s: Startzeit nicht bestimmbar (%s)", src.name, e)
+                    log.warning("%s: start time could not be determined (%s)", src.name, e)
                     continue
                 if start >= now:
                     continue
+                for st in stations:
+                    self.store.set_station_meta(src.name, sub.station_key(st), st.get("name"),
+                                                st.get("canton") or src.cfg.get("canton"),
+                                                st.get("lat"), st.get("lon"), st.get("height_masl"))
                 label = ",".join(sub.station_key(s) for s in stations)
-                log.info("%s %s: lade ab %s", src.name, label, start.strftime("%Y-%m-%d %H:%M"))
+                log.info("%s %s: loading from %s", src.name, label, start.strftime("%Y-%m-%d %H:%M"))
                 n = 0
                 try:
                     for df in sub.fetch(Period(start, now)):
-                        n += self.store.upsert(df)
+                        n += self.store.upsert(df, sub.describe)
                 except Exception:
-                    log.exception("%s %s: Abbruch", src.name, label)
+                    log.exception("%s %s: aborted", src.name, label)
                 counts[f"{src.name}:{label}"] = n
-                log.info("%s %s: %d Werte gespeichert", src.name, label, n)
+                log.info("%s %s: %d values stored", src.name, label, n)
         return counts

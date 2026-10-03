@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Zürcher Messdaten</title>
+<title>ledwetter – Messdaten</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600&display=swap">
 <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
@@ -40,6 +40,7 @@
   .station input { margin: 0; }
   .station small { color: var(--muted); display: block; font-size: 12px; }
   .checks label { display: flex; gap: 8px; align-items: center; padding: 3px 0; }
+  .checks details summary { cursor: pointer; }
   .segmented { display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; border: 1px solid var(--line); border-radius: 6px; overflow: hidden; }
   .segmented input { position: absolute; opacity: 0; pointer-events: none; }
   .segmented label { text-align: center; padding: 7px 4px; cursor: pointer; border-right: 1px solid var(--line); font-size: 14px; }
@@ -48,7 +49,8 @@
   .segmented input:focus-visible + label { outline: 2px solid var(--accent); outline-offset: -3px; }
   .range { display: grid; grid-template-columns: 1fr; gap: 6px; }
   .range label { font-size: 13px; color: var(--muted); }
-  input[type=datetime-local], input[type=number] { width: 100%; font: inherit; color: var(--ink); background: var(--fog);
+  #canton-filter { margin-bottom: 8px; }
+  select, input[type=datetime-local], input[type=number] { width: 100%; font: inherit; color: var(--ink); background: var(--fog);
          border: 1px solid var(--line); border-radius: 4px; padding: 6px 8px; }
   .presets { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
   button { font: inherit; cursor: pointer; border-radius: 4px; }
@@ -71,7 +73,7 @@
 </head>
 <body>
 <header>
-  <h1>Zürcher Messdaten</h1>
+  <h1>Messdaten</h1>
   <p id="summary">Lade Stationen …</p>
 </header>
 <div class="app">
@@ -79,6 +81,10 @@
     <form id="controls" onsubmit="return false">
       <fieldset>
         <legend>Stationen</legend>
+        <div id="canton-filter" hidden>
+          <label class="hint" for="canton">Kanton</label>
+          <select id="canton"></select>
+        </div>
         <div id="stations"></div>
         <p class="hint">Die Farbe gilt in allen Diagrammen.</p>
       </fieldset>
@@ -115,11 +121,11 @@
         </div>
         <div id="agg-options" hidden>
           <div class="checks" style="margin-top:10px">
-            <label><input type="checkbox" id="band" checked> Min–Max-Spanne zeigen</label>
+            <label><input type="checkbox" id="band" checked> Min–Max-Spanne zeigen (bei Mittelwerten)</label>
           </div>
           <label class="hint" for="coverage">Mindestabdeckung pro Stunde/Tag in %</label>
           <input type="number" id="coverage" min="0" max="100" step="5" value="75">
-          <p class="hint">Stunden und Tage in UTC, beschriftet mit ihrem Beginn. Lücken unter der Mindestabdeckung bleiben leer.</p>
+          <p class="hint">Stunden und Tage in UTC, beschriftet mit ihrem Beginn. Je nach Messgrösse wird gemittelt, summiert (Niederschlag, Sonnenschein), das Maximum genommen (Böen) oder vektoriell gemittelt (Windrichtung). Wind wird in km/h angezeigt.</p>
         </div>
       </fieldset>
       <button type="button" id="draw">Diagramm zeichnen</button>
@@ -131,10 +137,27 @@
   </main>
 </div>
 <script>
-const PARAMS = { air_temperature: "Lufttemperatur", water_temperature: "Wassertemperatur", wind_speed: "Windgeschwindigkeit" };
+const QUANTITIES = {
+  air_temperature: "Lufttemperatur 2 m", air_temperature_5cm: "Temperatur 5 cm über Gras", surface_temperature: "Temperatur Bodenoberfläche",
+  dew_point: "Taupunkt", relative_humidity: "Relative Luftfeuchte", vapour_pressure: "Dampfdruck",
+  pressure_qfe: "Luftdruck Stationshöhe (QFE)", pressure_qff: "Luftdruck Meereshöhe (QFF)", pressure_qnh: "Luftdruck QNH",
+  precipitation: "Niederschlag", rain_duration: "Niederschlagsdauer", sunshine_duration: "Sonnenscheindauer",
+  global_radiation: "Globalstrahlung", diffuse_radiation: "Diffusstrahlung", longwave_incoming: "Langwellige Einstrahlung",
+  longwave_outgoing: "Langwellige Ausstrahlung", shortwave_reflected: "Kurzwellig reflektierte Strahlung",
+  wind_speed: "Windgeschwindigkeit", wind_speed_vector: "Windgeschwindigkeit vektoriell", wind_gust: "Windböen",
+  wind_direction: "Windrichtung", visibility: "Sichtweite", snow_depth: "Schneehöhe",
+  soil_temperature_5cm: "Bodentemperatur 5 cm", soil_temperature_10cm: "Bodentemperatur 10 cm", soil_temperature_20cm: "Bodentemperatur 20 cm",
+  water_temperature: "Wassertemperatur", water_level: "Wasserstand", lake_level: "Pegel Zürichsee", discharge: "Abfluss",
+};
+const ORDER = Object.keys(QUANTITIES);
 const SOURCES = { meteoschweiz: "MeteoSchweiz", wapo: "Wasserschutzpolizei", bafu: "BAFU Hydrologie", ugz: "Stadt Zürich UGZ", metar: "METAR" };
 const COLORS = ["#1F6F8B", "#5C8A3A", "#B5861B", "#7A4E8C", "#2F5D50", "#A8452F", "#4B6FB5", "#8C6D46", "#2A8C82", "#9C3D6A", "#5E6B2E", "#3D4F7A"];
 const AGG_LABEL = { raw: "Rohdaten", hour: "Stundenwerte", day: "Tageswerte" };
+const METHOD = { mean: "Mittel", sum: "Summe", max: "Maximum", min: "Minimum", dir: "Vektormittel" };
+// Display units: wind is converted to km/h so that sources can be compared; other units are shown as delivered
+const CONVERT = { wind_speed: "km/h", wind_gust: "km/h", wind_speed_vector: "km/h", visibility: "km" };
+const FACTORS = { "m/s>km/h": 3.6, "kt>km/h": 1.852, "km/h>km/h": 1, "SM>km": 1.609344 };
+const UNIT_ALIASES = { "W/m2": "W/m²", "%Hr": "%" };
 const $ = (id) => document.getElementById(id);
 const state = { series: [], stations: new Map() };
 
@@ -145,6 +168,16 @@ const fmt = (zone) => new Intl.DateTimeFormat("sv-SE", { timeZone: zone, year: "
 const toLabel = (sec) => fmt(tz() === "utc" ? "UTC" : undefined).format(new Date(sec * 1000));
 const toInput = (sec) => toLabel(sec).slice(0, 16).replace(" ", "T");
 const fromInput = (val) => Date.parse(tz() === "utc" ? val + "Z" : val) / 1000;
+const keyOf = (s) => s.quantity || `${s.source}:${s.parameter}`;
+const labelOf = (s) => (s.quantity && QUANTITIES[s.quantity]) || `${s.description} (${SOURCES[s.source] || s.source})`;
+const unitAlias = (u) => UNIT_ALIASES[u] || u;
+
+function displayUnit(s) {
+  const target = CONVERT[s.quantity];
+  const from = unitAlias(s.unit);
+  if (target && FACTORS[`${from}>${target}`] !== undefined) return { unit: target, factor: FACTORS[`${from}>${target}`] };
+  return { unit: from, factor: 1 };
+}
 
 function setStatus(text, isError = false) { $("status").textContent = text; $("status").className = isError ? "error" : ""; }
 
@@ -165,38 +198,55 @@ async function init() {
   }
   state.series.forEach((s) => {
     const key = `${s.source}|${s.station_id}`;
-    if (!state.stations.has(key)) state.stations.set(key, { key, name: s.station_name, source: s.source, series: [] });
+    if (!state.stations.has(key)) state.stations.set(key, { key, name: s.station_name, source: s.source, canton: s.canton || "", series: [] });
     state.stations.get(key).series.push(s);
   });
   [...state.stations.values()].forEach((st, i) => (st.color = COLORS[i % COLORS.length]));
-  renderStations(); renderParams(); setPreset(168);
-  updateSummary();
+  renderCantons(); renderStations(); renderParams(); setPreset(168);
   $("plot").innerHTML = '<div class="empty">Wähle Stationen, Messgrössen und Zeitraum, dann «Diagramm zeichnen».</div>';
 }
 
+function renderCantons() {
+  const cantons = [...new Set([...state.stations.values()].map((s) => s.canton).filter(Boolean))].sort();
+  $("canton-filter").hidden = cantons.length < 2;
+  $("canton").innerHTML = '<option value="">Alle Kantone</option>' + cantons.map((c) => `<option value="${c}">${c}</option>`).join("");
+}
+
 function renderStations() {
+  const canton = $("canton").value;
+  const checked = new Set(selected("station"));
   const bySource = {};
-  state.stations.forEach((st) => (bySource[st.source] ||= []).push(st));
+  state.stations.forEach((st) => { if (!canton || st.canton === canton) (bySource[st.source] ||= []).push(st); });
   $("stations").innerHTML = Object.entries(bySource).map(([src, list]) =>
-    `<div class="group-name">${SOURCES[src] || src}</div>` + list.map((st) => {
-      const params = [...new Set(st.series.map((s) => PARAMS[s.parameter] || s.parameter))].join(", ");
-      return `<label class="station"><span class="swatch" style="background:${st.color}"></span>
-        <input type="checkbox" name="station" value="${st.key}"><span>${st.name}<small>${params}</small></span></label>`;
-    }).join("")).join("");
+    `<div class="group-name">${SOURCES[src] || src}</div>` + list.map((st) =>
+      `<label class="station"><span class="swatch" style="background:${st.color}"></span>
+        <input type="checkbox" name="station" value="${st.key}" ${checked.has(st.key) ? "checked" : ""}><span>${st.name}<small>${st.canton ? st.canton + ", " : ""}${st.series.length} Messreihen</small></span></label>`
+    ).join("")).join("");
 }
 
 function renderParams() {
-  const found = new Set(state.series.map((s) => s.parameter));
-  const present = [...Object.keys(PARAMS).filter((p) => found.has(p)), ...[...found].filter((p) => !(p in PARAMS))];
-  $("params").innerHTML = present.map((p) =>
-    `<label><input type="checkbox" name="param" value="${p}" ${p === "air_temperature" ? "checked" : ""}> ${PARAMS[p] || p}</label>`).join("");
+  const chosen = new Set(selected("param"));
+  const stations = selected("station");
+  const pool = stations.length ? stations.flatMap((k) => state.stations.get(k).series) : state.series;
+  const entries = new Map();
+  pool.forEach((s) => { const k = keyOf(s); if (!entries.has(k)) entries.set(k, { key: k, label: labelOf(s), group: s.group || "Weitere", known: !!s.quantity }); });
+  const sorted = [...entries.values()].sort((a, b) => {
+    const ia = ORDER.indexOf(a.key), ib = ORDER.indexOf(b.key);
+    if (ia >= 0 || ib >= 0) return (ia < 0 ? 999 : ia) - (ib < 0 ? 999 : ib);
+    return a.group.localeCompare(b.group) || a.label.localeCompare(b.label);
+  });
+  if (!chosen.size && entries.has("air_temperature")) chosen.add("air_temperature");
+  const known = sorted.filter((e) => e.known), other = sorted.filter((e) => !e.known);
+  const row = (e) => `<label><input type="checkbox" name="param" value="${e.key}" ${chosen.has(e.key) ? "checked" : ""}> ${e.label}</label>`;
+  $("params").innerHTML = known.map(row).join("") +
+    (other.length ? `<details ${other.some((e) => chosen.has(e.key)) ? "open" : ""}><summary class="group-name">Weitere Parameter (${other.length})</summary>${other.map(row).join("")}</details>` : "");
 }
 
 const selected = (name) => [...document.querySelectorAll(`input[name=${name}]:checked`)].map((i) => i.value);
 
 function selectedSeries() {
   const params = selected("param");
-  return selected("station").flatMap((k) => state.stations.get(k).series.filter((s) => params.includes(s.parameter)));
+  return selected("station").flatMap((k) => state.stations.get(k).series.filter((s) => params.includes(keyOf(s))));
 }
 
 function setPreset(h) {
@@ -211,16 +261,17 @@ function setPreset(h) {
 }
 
 function updateSummary() {
-  const st = selected("station").length, ps = selected("param").map((p) => PARAMS[p]);
+  const st = selected("station").length;
+  const ps = selected("param").map((k) => QUANTITIES[k] || (state.series.find((s) => keyOf(s) === k) || {}).description || k);
   const range = $("from").value && $("to").value ? `${$("from").value.replace("T", " ")} bis ${$("to").value.replace("T", " ")}` : "";
-  if (!st || !ps.length) { $("summary").textContent = `${state.stations.size} Stationen verfügbar. Wähle Stationen und Messgrössen.`; return; }
+  if (!st || !ps.length) { $("summary").textContent = `${state.stations.size} Stationen mit ${state.series.length} Messreihen verfügbar. Wähle Stationen und Messgrössen.`; return; }
   const list = ps.length > 1 ? ps.slice(0, -1).join(", ") + " und " + ps.at(-1) : ps[0];
   $("summary").textContent = `${list} an ${st} ${st === 1 ? "Station" : "Stationen"}, ${range} (${tz() === "utc" ? "UTC" : "Lokalzeit"}), ${AGG_LABEL[agg()]}.`;
 }
 
 function seriesLabel(s, siblings) {
   const st = state.stations.get(`${s.source}|${s.station_id}`);
-  if (siblings > 1) return `${st.name} (${s.time_ref === "instant" ? "Momentanwert" : `${s.interval_min}-min-Mittel`})`;
+  if (siblings > 1) return `${st.name} (${s.parameter})`;
   return st.name;
 }
 
@@ -236,40 +287,44 @@ async function draw() {
     data = await getJSON(`/api/data?series=${series.map((s) => s.id).join(",")}&start=${start}&end=${end}&agg=${a}&min_coverage=${cov}`);
   } catch (e) { setStatus(e.message, true); return; }
 
-  const params = selected("param").filter((p) => series.some((s) => s.parameter === p));
+  const keys = selected("param").filter((k) => series.some((s) => keyOf(s) === k));
   const byId = Object.fromEntries(data.series.map((d) => [d.id, d]));
   const css = getComputedStyle(document.documentElement);
   const ink = css.getPropertyValue("--ink").trim(), line = css.getPropertyValue("--line").trim();
-  const traces = [], gap = 0.07, h = (1 - gap * (params.length - 1)) / params.length;
-  const layout = { height: 300 * params.length + 90, margin: { l: 56, r: 16, t: 28, b: 48 }, hovermode: "x unified",
+  const traces = [], gap = 0.06, h = (1 - gap * (keys.length - 1)) / keys.length;
+  const layout = { height: 280 * keys.length + 90, margin: { l: 56, r: 16, t: 28, b: 48 }, hovermode: "x unified",
     paper_bgcolor: "rgba(0,0,0,0)", plot_bgcolor: "rgba(0,0,0,0)", font: { family: "Barlow, sans-serif", color: ink, size: 13 },
     showlegend: false, annotations: [] };
   let points = 0;
-  params.forEach((p, i) => {
+  keys.forEach((k, i) => {
     const ax = i === 0 ? "" : String(i + 1);
     const top = 1 - i * (h + gap);
-    const unit = series.find((s) => s.parameter === p).unit;
-    layout[`yaxis${ax}`] = { domain: [top - h, top], title: { text: unit }, gridcolor: line, zerolinecolor: line, anchor: `x${ax}` };
-    layout[`xaxis${ax}`] = { anchor: `y${ax}`, matches: i ? "x" : undefined, showticklabels: i === params.length - 1,
-                             gridcolor: line, type: "date" };
-    layout.annotations.push({ text: PARAMS[p], xref: "paper", yref: "paper", x: 0, y: top + 0.005, xanchor: "left",
+    const own = series.filter((s) => keyOf(s) === k);
+    const units = [...new Set(own.map((s) => displayUnit(s).unit))];
+    const isDir = own.every((s) => s.agg === "dir");
+    layout[`yaxis${ax}`] = { domain: [top - h, top], title: { text: units.join(" / ") }, gridcolor: line, zerolinecolor: line,
+                             anchor: `x${ax}`, ...(isDir ? { range: [0, 360], dtick: 90 } : {}) };
+    layout[`xaxis${ax}`] = { anchor: `y${ax}`, matches: i ? "x" : undefined, showticklabels: i === keys.length - 1, gridcolor: line, type: "date" };
+    layout.annotations.push({ text: QUANTITIES[k] || labelOf(own[0]), xref: "paper", yref: "paper", x: 0, y: top + 0.004, xanchor: "left",
                               yanchor: "bottom", showarrow: false, font: { size: 15, family: "Barlow Semi Condensed, sans-serif" } });
-    const own = series.filter((s) => s.parameter === p);
     own.forEach((s) => {
       const d = byId[s.id]; if (!d || !d.t.length) return;
       const st = state.stations.get(`${s.source}|${s.station_id}`);
-      const x = d.t.map(toLabel), name = seriesLabel(s, own.filter((o) => o.station_id === s.station_id && o.source === s.source).length);
+      const { unit, factor } = displayUnit(s);
+      const scale = (arr) => arr && arr.map((v) => (v === null ? null : v * factor));
+      const x = d.t.map(toLabel), y = scale(d.value);
+      const name = seriesLabel(s, own.filter((o) => o.station_id === s.station_id && o.source === s.source).length);
       points += d.t.length;
-      if (a !== "raw" && $("band").checked) {
-        traces.push({ x, y: d.max, xaxis: `x${ax}`, yaxis: `y${ax}`, mode: "lines", line: { width: 0 }, hoverinfo: "skip", connectgaps: false });
-        traces.push({ x, y: d.min, xaxis: `x${ax}`, yaxis: `y${ax}`, mode: "lines", line: { width: 0 }, fill: "tonexty",
+      if (d.min && $("band").checked) {
+        traces.push({ x, y: scale(d.max), xaxis: `x${ax}`, yaxis: `y${ax}`, mode: "lines", line: { width: 0 }, hoverinfo: "skip", connectgaps: false });
+        traces.push({ x, y: scale(d.min), xaxis: `x${ax}`, yaxis: `y${ax}`, mode: "lines", line: { width: 0 }, fill: "tonexty",
                       fillcolor: st.color + "2E", hoverinfo: "skip", connectgaps: false });
       }
-      const custom = a === "raw" ? null : d.t.map((_, k) => [d.min[k], d.max[k], d.n[k]]);
-      traces.push({ x, y: d.mean, xaxis: `x${ax}`, yaxis: `y${ax}`, name, mode: d.t.length > 400 ? "lines" : "lines+markers",
-        line: { color: st.color, width: 1.6 }, marker: { size: 4, color: st.color }, connectgaps: false, customdata: custom,
-        hovertemplate: a === "raw" ? `${name}: %{y:.1f} ${unit}<extra></extra>`
-          : `${name}: %{y:.1f} ${unit} (%{customdata[0]:.1f} bis %{customdata[1]:.1f}, n=%{customdata[2]})<extra></extra>` });
+      const how = a === "raw" ? "" : ` ${METHOD[d.agg] || d.agg}`;
+      traces.push({ x, y, xaxis: `x${ax}`, yaxis: `y${ax}`, name, mode: isDir ? "markers" : (d.t.length > 400 ? "lines" : "lines+markers"),
+        line: { color: st.color, width: 1.6 }, marker: { size: isDir ? 3 : 4, color: st.color }, connectgaps: false,
+        customdata: a === "raw" ? null : d.n,
+        hovertemplate: `${name}:${how} %{y:.1f} ${unit}` + (a === "raw" ? "" : " (n=%{customdata})") + "<extra></extra>" });
     });
   });
   if (!points) { Plotly.purge("plot"); $("plot").innerHTML = '<div class="empty">Im gewählten Zeitraum gibt es für diese Auswahl keine Messwerte. Prüfe den Zeitraum oder die Mindestabdeckung.</div>'; setStatus(""); return; }
@@ -284,6 +339,8 @@ $("draw").addEventListener("click", draw);
 $("presets").addEventListener("click", (e) => { const h = e.target.dataset.h; if (h) setPreset(h === "all" ? "all" : Number(h)); });
 $("controls").addEventListener("change", (e) => {
   if (e.target.name === "agg") $("agg-options").hidden = agg() === "raw";
+  if (e.target.name === "station") renderParams();
+  if (e.target.id === "canton") { renderStations(); renderParams(); }
   if (e.target.name === "tz") { /* re-display the inputs in the newly selected time zone */
     const other = tz() === "utc" ? "local" : "utc";
     ["from", "to"].forEach((id) => { const v = $(id).value; if (!v) return;

@@ -74,6 +74,8 @@ def file_route(template):
 def bafu_handler(payload):
     """Answers GraphQL queries from the fixtures and honours the requested time window."""
     q = payload["query"]
+    if "stations(" in q and "status" in q:
+        return {"data": {"water": {"observations": {"stations": json.loads(fixture_bytes("bafu/station_list.json"))}}}}
     if "stations(" in q:
         return {"data": {"water": {"observations": {"stations": json.loads(fixture_bytes("bafu/stations.json"))}}}}
     if "data_10min_mean" in q:
@@ -85,8 +87,17 @@ def bafu_handler(payload):
         return {"data": {"water": {"observations": {"data_10min_mean": rows}}}}
     if "data_live" in q:
         return {"data": {"water": {"observations": {"data_live": [
-            {"stationNo": "2099", "timestamp": "2026-10-03T05:47:00Z", "value": 16.1}]}}}}
+            {"stationNo": "2099", "parameterName": "WT", "timestamp": "2026-10-03T05:47:00Z", "value": 16.1}]}}}}
     return {"errors": [{"message": "unknown query"}]}
+
+
+class _One:
+    """Adapter so that file_route can be used with a single extracted group."""
+    def __init__(self, value):
+        self.value = value
+
+    def groups(self):
+        return (self.value,)
 
 
 def make_fake_http() -> FakeHttp:
@@ -95,7 +106,23 @@ def make_fake_http() -> FakeHttp:
             return {"ok": True, "result": []}
         return fixture_bytes(f"wapo/tecdottir_{m.group(1)}.json")
 
+    def identify(m, params):
+        # simplified cantons: west of 8.0° = BE, north-east of 47.25°/8.35° = ZH, otherwise AG
+        lon, lat = (float(x) for x in params["geometry"].split(","))
+        canton = "BE" if lon < 8.0 else "ZH" if lat > 47.25 and lon >= 8.35 else "AG"
+        return {"results": [{"layerBodId": "ch.swisstopo.swissboundaries3d-kanton-flaeche.fill",
+                             "attributes": {"ak": canton, "name": "x"}}]}
+
+    def find(m, params):
+        boxes = {"ZH": [8.35, 47.15, 9.0, 47.70]}
+        box = boxes.get(params.get("searchText"))
+        return {"results": [{"bbox": box, "attributes": {"ak": params.get("searchText")}}] if box else []}
+
     routes = [
+        (r"api3\.geo\.admin\.ch/rest/services/api/MapServer/identify", identify),
+        (r"api3\.geo\.admin\.ch/rest/services/api/MapServer/find", find),
+        (r"aviationweather\.gov/api/data/stationinfo", lambda m, p: fixture_bytes("metar/stationinfo.json")),
+        (r"/ch\.meteoschweiz\.([\w-]+)/(\1_meta_\w+\.csv)$", lambda m, p: file_route("smn/{}")(_One(m.group(2)), p)),
         (r"/api/stac/v1/collections/ch\.meteoschweiz\.(ogd-smn(?:-tower)?)/items/(\w+)$", file_route("smn/stac_{}_{}.json")),
         (r"/ch\.meteoschweiz\.[\w-]+/\w+/([\w.-]+\.csv)$", file_route("smn/{}")),
         (r"tecdottir.*/measurements/(\w+)$", wapo_api),

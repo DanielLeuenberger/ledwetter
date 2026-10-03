@@ -15,8 +15,8 @@ from ledwetter.storage import MeasurementStore
 def server(tmp_path):
     store = MeasurementStore(tmp_path / "s.db")
     t = pd.date_range("2026-10-03T00:10Z", "2026-10-03T06:00Z", freq="10min")
-    store.upsert(make_frame(t, source="meteoschweiz", station_id="SMA", station_name="Fluntern",
-                            time_ref="interval_end", interval_min=10, air_temperature=range(len(t))))
+    store.upsert(make_frame(t, list(range(len(t))), source="meteoschweiz", station_id="SMA", station_name="Fluntern",
+                            parameter="tre200s0", unit="°C", time_ref="interval_end", interval_min=10))
     httpd = make_server(store, "127.0.0.1", 0)
     httpd.api.max_raw_points = 20
     th = threading.Thread(target=httpd.serve_forever, daemon=True)
@@ -42,7 +42,7 @@ def test_index_is_served(server):
 def test_series_endpoint(server):
     status, _, body = get(server + "/api/series")
     (s,) = json.loads(body)["series"]
-    assert status == 200 and s["station_id"] == "SMA" and s["parameter"] == "air_temperature"
+    assert status == 200 and s["station_id"] == "SMA" and s["parameter"] == "tre200s0" and s["agg"] == "mean"
 
 
 def test_hourly_data(server):
@@ -50,7 +50,7 @@ def test_hourly_data(server):
     end = int(pd.Timestamp("2026-10-03T06:00Z").timestamp())
     status, _, body = get(f"{server}/api/data?series=1&start={start}&end={end}&agg=hour")
     data = json.loads(body)
-    assert status == 200 and data["agg"] == "hour" and len(data["series"][0]["t"]) == 6
+    assert status == 200 and data["agg"] == "hour" and len(data["series"][0]["t"]) == 6 and "value" in data["series"][0]
 
 
 def test_raw_limit_and_validation(server):

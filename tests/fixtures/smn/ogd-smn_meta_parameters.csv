@@ -1,0 +1,15 @@
+parameter_shortname;parameter_description_de;parameter_description_fr;parameter_description_it;parameter_description_en;parameter_group_de;parameter_group_fr;parameter_group_it;parameter_group_en;parameter_granularity;parameter_decimals;parameter_datatype;parameter_unit
+dkl010z0;"Windrichtung; Zehnminutenmittel";;;"Wind direction; ten minutes mean";Wind;;;;T;1;Float;°
+fkl010z0;"Windgeschwindigkeit skalar; Zehnminutenmittel in m/s";;;"Wind speed scalar; ten minutes mean in m/s";Wind;;;;T;1;Float;m/s
+fu3010z0;"Windgeschwindigkeit; Zehnminutenmittel in km/h";;;"Wind speed; ten minutes mean in km/h";Wind;;;;T;1;Float;km/h
+fu3010z1;"Böenspitze (Sekundenböe); Maximum in km/h";;;"Gust peak (one second); maximum in km/h";Wind;;;;T;1;Float;km/h
+gre000z0;"Globalstrahlung; Zehnminutenmittel";;;"Global radiation; ten minutes mean";Strahlung;;;;T;1;Float;W/m²
+htoauts0;"Schneehöhe (automatisch gemessen); Momentanwert";;;"Snow depth (automatic measurement); current value";Schnee;;;;T;1;Float;cm
+prestas0;"Luftdruck auf Barometerhöhe (QFE); Momentanwert";;;"Atmospheric pressure at barometric altitude (QFE); current value";Druck;;;;T;1;Float;hPa
+rre150h0;"Niederschlag; Stundensumme";;;"Precipitation; hourly total";Niederschlag;;;;H;1;Float;mm
+rre150z0;"Niederschlag; Zehnminutensumme";;;"Precipitation; ten minutes total";Niederschlag;;;;T;1;Float;mm
+sre000z0;"Sonnenscheindauer; Zehnminutensumme";;;"Sunshine duration; ten minutes total";Sonne;;;;T;1;Float;min
+tde200s0;"Taupunkt 2 m über Boden; Momentanwert";;;"Dew point 2 m above ground; current value";Feuchte;;;;T;1;Float;°C
+tre005s0;"Lufttemperatur 5 cm über Gras; Momentanwert";;;"Air temperature at 5 cm above grass; current value";Temperatur;;;;T;1;Float;°C
+tre200s0;"Lufttemperatur 2 m über Boden; Momentanwert";;;"Air temperature 2 m above ground; current value";Temperatur;;;;T;1;Float;°C
+ure200s0;"Relative Luftfeuchtigkeit 2 m über Boden; Momentanwert";;;"Relative air humidity 2 m above ground; current value";Feuchte;;;;T;1;Float;%

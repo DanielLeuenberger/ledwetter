@@ -25,6 +25,7 @@ requirements:
     - setuptools >=68
   run:
     - python >=3.10
+    - numpy >=1.24
     - pandas >=2.0
     - requests >=2.28
     - pyyaml >=6.0
@@ -42,5 +43,5 @@ test:
     - pytest -q tests
 
 about:
-  summary: Collect, store and visualise measurements from public weather stations around Zurich
+  summary: Collect, store and visualise measurements from public weather stations in Switzerland
   license: LicenseRef-Proprietary

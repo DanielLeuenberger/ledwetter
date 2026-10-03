@@ -14,6 +14,7 @@ import pytest
 
 from conftest import FIXED_NOW, FIXTURES, make_fake_http
 from ledwetter.export import collect, write_csv
+from ledwetter.model import concat
 from ledwetter.ingest import Ingestor
 from ledwetter.model import Period
 from ledwetter.sources import MeteoSwissSMN, build_sources
@@ -57,8 +58,11 @@ def test_export_invariants(tmp_path, test_config, clock):
     assert not df.duplicated(["time_utc", "source", "station_id", "parameter", "time_ref"]).any()
     t = pd.to_datetime(df["time_utc"], utc=True)
     assert t.min() >= pd.Timestamp(PERIOD.start) and t.max() <= pd.Timestamp(PERIOD.end)
-    assert set(df["unit"]) <= {"°C", "km/h"}
     assert set(df["time_ref"]) <= {"interval_end", "interval_start", "instant", "unknown"}
+    # every parameter has exactly one unit, and known quantities are tagged across sources
+    assert (df.groupby(["source", "parameter"])["unit"].nunique() == 1).all()
+    temps = df[df["quantity"] == "air_temperature"]
+    assert set(temps["source"]) == {"meteoschweiz", "wapo", "ugz", "metar"}
 
 
 def test_database_aggregates_match_reference(tmp_path, test_config, clock):
@@ -88,9 +92,11 @@ def test_real_meteoswiss_excerpt_zermatt(clock):
     """Real excerpt of an SMN file (t_now, Zermatt) – guards the file format."""
     src = MeteoSwissSMN(make_fake_http(), {"stations": []}, clock)
     text = (FIXTURES / "smn/real_zermatt_t_now_excerpt.csv").read_bytes().decode("cp1252")
-    df = src.parse(text, {"code": "ZER", "name": "Zermatt"}, src.cfg["params"]["ogd-smn"])
+    df = concat(src.parse(text, {"code": "ZER", "name": "Zermatt"}))
+    assert set(df["parameter"]) == {"tre200s0", "tre005s0", "tresurs0", "xchills0"}
+    df = df[df["parameter"] == "tre200s0"]
     assert df["time_utc"].dt.strftime("%Y-%m-%dT%H:%MZ").tolist() == [
         "2026-07-09T00:00Z", "2026-07-09T00:10Z", "2026-07-09T00:20Z",
         "2026-07-09T00:30Z", "2026-07-09T00:40Z", "2026-07-09T00:50Z"]
     assert df["value"].tolist() == [14.2, 13.7, 13.8, 13.3, 13.3, 13.4]
-    assert set(df["parameter"]) == {"air_temperature"}
+    assert set(df["time_ref"]) == {"instant"}
